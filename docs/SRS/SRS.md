@@ -290,3 +290,353 @@ This software project draws upon:
 - Android developer guidelines.
 - Clean Architecture principles.
 - Domain-Driven Design (DDD).
+
+# Chapter 2 – Overall Description
+
+## 2.1 Product Perspective
+
+The PigPower SmartFarm Platform (PSP) is an integrated Agricultural Management Information System (AgMIS) developed to support the digital transformation of Lesotho's pork value chain. The platform serves as the technological backbone of PigPower Lesotho's community-based circular pork economy, enabling collaboration among farmers, field officers, veterinarians, processors, logistics personnel, buyers, and administrators.
+
+Rather than functioning as a standalone mobile application, the PSP is designed as a distributed enterprise software platform consisting of mobile applications, web-based administration tools, backend services, databases, and analytics components. The system will support both online and offline operation, ensuring that users in rural areas with limited internet connectivity can continue recording production activities and synchronize their data when connectivity becomes available.
+
+The platform follows a modular architecture that allows new business capabilities to be introduced incrementally without disrupting existing services. Future modules such as IoT sensor integration, RFID livestock identification, AI-assisted disease detection, carbon credit reporting, and regional market integration can be incorporated as the business grows.
+
+---
+
+## 2.2 Product Vision
+
+The vision of the PigPower SmartFarm Platform is to become the leading digital livestock management ecosystem in Southern Africa by enabling technology-driven, traceable, sustainable, and commercially viable pork production.
+
+The platform seeks to improve agricultural productivity, strengthen food security, increase farmer incomes, reduce environmental impacts, and support evidence-based decision-making across the entire pork value chain.
+
+---
+
+## 2.3 Product Objectives
+
+The primary objectives of the system are to:
+
+- Digitize pig farming operations across Lesotho.
+- Standardize production records and farm management practices.
+- Improve livestock traceability from farm to consumer.
+- Support disease prevention through digital health records and alerts.
+- Enable centralized monitoring of distributed production sites.
+- Improve coordination of logistics, processing, and distribution.
+- Facilitate transparent farmer payments and business reporting.
+- Integrate renewable energy monitoring for biodigester systems.
+- Generate reliable operational and financial data for management decisions.
+- Provide a scalable platform capable of supporting future regional expansion.
+
+---
+
+## 2.4 Product Functions
+
+The initial release of the PigPower SmartFarm Platform shall provide the following functional areas:
+
+### User and Identity Management
+
+- User registration
+- Authentication
+- Role-Based Access Control (RBAC)
+- Password recovery
+- User profile management
+
+### Farmer Management
+
+- Farmer registration
+- Contract management
+- Farmer performance monitoring
+- Farmer communication
+
+### Farm Management
+
+- Farm registration
+- GPS location capture
+- Pigsty management
+- Farm inspections
+- Biosecurity assessments
+
+### Pig Management
+
+- Individual pig registration
+- Unique identification (QR code, with future RFID support)
+- Breed management
+- Growth monitoring
+- Weight recording
+- Reproductive management
+- Mortality recording
+
+### Veterinary Services
+
+- Vaccination scheduling
+- Treatment records
+- Disease reporting
+- Veterinary visit management
+- Animal health history
+
+### Feed Management
+
+- Feed inventory
+- Feed procurement records
+- Feed consumption tracking
+- Feed conversion monitoring
+
+### Collection and Logistics
+
+- Collection scheduling
+- Route planning
+- Vehicle assignment
+- Delivery tracking
+- Collection history
+
+### Processing Management
+
+- Animal reception
+- Slaughter records
+- Carcass grading
+- Product processing
+- Packaging
+- Batch management
+- Inventory tracking
+
+### Marketplace
+
+- Customer management
+- Product catalogue
+- Order processing
+- Sales reporting
+- Digital invoices
+
+### Renewable Energy
+
+- Biodigester registration
+- Biogas production records
+- Organic fertilizer production
+- Environmental performance indicators
+
+### Reporting and Analytics
+
+- Executive dashboards
+- Farmer performance reports
+- Production reports
+- Financial summaries
+- AI-ready forecasting datasets
+
+---
+
+## 2.5 User Classes and Characteristics
+
+The platform supports multiple categories of users with different responsibilities and permissions.
+
+### Farmers
+
+Farmers are the primary producers within the PigPower network. They use the mobile application to register production activities, monitor pig health, receive alerts, request veterinary support, and access performance information.
+
+Typical characteristics:
+
+- Limited technical expertise
+- Android smartphone users
+- May experience intermittent internet connectivity
+- Require simple, multilingual interfaces
+
+---
+
+### Field Officers
+
+Field officers register new farms, verify production data, conduct inspections, provide technical support, and assist with farmer onboarding.
+
+Characteristics:
+
+- Moderate digital literacy
+- Frequent travel
+- GPS-enabled mobile devices
+- Offline operation required
+
+---
+
+### Veterinary Officers
+
+Veterinary officers manage disease surveillance, vaccinations, treatments, and herd health monitoring.
+
+Characteristics:
+
+- Professional users
+- Require detailed animal histories
+- Access to analytical reports
+- Mobile and web access
+
+---
+
+### Processing Officers
+
+Processing officers manage activities at the slaughterhouse, including receiving animals, carcass grading, inventory updates, packaging, and product traceability.
+
+Characteristics:
+
+- High-volume transactional users
+- Barcode/QR scanning
+- Desktop and tablet usage
+
+---
+
+### Logistics Officers
+
+Responsible for coordinating transportation of pigs and finished products.
+
+Characteristics:
+
+- Route planning
+- Collection scheduling
+- Vehicle tracking
+- Delivery confirmation
+
+---
+
+### Buyers
+
+Institutional buyers, retailers, wholesalers, hotels, restaurants, and individual consumers purchasing PigPower products.
+
+Characteristics:
+
+- Product ordering
+- Invoice tracking
+- Delivery status monitoring
+
+---
+
+### System Administrators
+
+Administrators configure the system, manage users, monitor operations, generate reports, and maintain platform integrity.
+
+Characteristics:
+
+- Full system privileges
+- Advanced reporting
+- Security management
+- Audit review
+
+---
+
+## 2.6 Operating Environment
+
+The PigPower SmartFarm Platform shall operate within the following environment:
+
+### Mobile Application
+
+- Android 10 or later (minimum target)
+- Flutter framework
+- SQLite local database
+- Camera support
+- GPS support
+- Offline synchronization
+
+### Web Administration Portal
+
+- Modern web browsers (Chrome, Edge, Firefox)
+- Responsive interface
+- Desktop and tablet support
+
+### Backend Services
+
+- Ubuntu Linux Server
+- FastAPI
+- Docker containers
+- PostgreSQL database
+- RESTful APIs
+- HTTPS communication
+
+### Infrastructure
+
+- Cloud-hosted or on-premises deployment
+- Daily automated backups
+- Secure network communication
+- Scalable architecture
+
+---
+
+## 2.7 Design Constraints
+
+The system shall be designed to satisfy the following constraints:
+
+- Operate reliably in low-bandwidth environments.
+- Support offline data capture with synchronization.
+- Minimize recurring software licensing costs through open-source technologies.
+- Be modular and extensible.
+- Maintain data integrity across distributed users.
+- Protect sensitive personal and business information.
+- Support future integration with IoT devices and third-party services.
+
+---
+
+## 2.8 Assumptions and Dependencies
+
+The following assumptions apply:
+
+- Farmers have access to Android smartphones.
+- Periodic internet connectivity is available for synchronization.
+- Field officers provide onboarding and technical assistance.
+- PostgreSQL serves as the centralized operational database.
+- QR codes are used initially for livestock identification, with RFID considered for future implementation.
+- Government regulations permit digital livestock record keeping.
+- Processing facilities maintain standardized operational procedures.
+
+---
+
+## 2.9 Business Process Overview
+
+The high-level business workflow is illustrated below:
+
+```text
+Farmer Registration
+        │
+        ▼
+Farm Registration
+        │
+        ▼
+Pig Registration
+        │
+        ▼
+Feeding & Health Records
+        │
+        ▼
+Veterinary Monitoring
+        │
+        ▼
+Growth Tracking
+        │
+        ▼
+Collection Scheduling
+        │
+        ▼
+Transport
+        │
+        ▼
+Processing Plant
+        │
+        ▼
+Packaging
+        │
+        ▼
+Distribution
+        │
+        ▼
+Retail / Consumer
+```
+
+This workflow forms the backbone of the PigPower SmartFarm Platform and provides end-to-end traceability across the pork value chain.
+
+---
+
+## 2.10 Product Success Criteria
+
+The success of the platform will be evaluated against measurable indicators, including:
+
+- Number of farmers actively using the platform.
+- Percentage of pigs digitally registered.
+- Reduction in paper-based record keeping.
+- Accuracy and completeness of traceability records.
+- Improved disease response times.
+- Increased farmer productivity.
+- Reduced logistics inefficiencies.
+- Increased local pork production.
+- User satisfaction and adoption rates.
+- Platform scalability and system availability.
