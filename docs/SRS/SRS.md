@@ -640,3 +640,371 @@ The success of the platform will be evaluated against measurable indicators, inc
 - Increased local pork production.
 - User satisfaction and adoption rates.
 - Platform scalability and system availability.
+
+# Chapter 3 – Business Requirements
+
+## 3.1 Business Overview
+
+PigPower Lesotho is a technology-enabled agribusiness established to transform Lesotho's pork value chain through farmer aggregation, standardized production systems, centralized processing, renewable energy generation, and digital technologies.
+
+Unlike conventional pig farms that focus solely on livestock production, PigPower operates as a platform business that coordinates a distributed network of independent farmers while providing technical support, veterinary services, input procurement, traceability, processing, branding, and market access.
+
+The PigPower SmartFarm Platform (PSP) is the digital backbone of this business model. It integrates production, logistics, processing, sales, and reporting into a single enterprise platform, enabling real-time decision-making and operational transparency.
+
+---
+
+## 3.2 Business Goals
+
+The platform shall support the following strategic business goals.
+
+### BG-01: Increase National Pork Production
+
+Expand commercial pig production by integrating smallholder farmers into a coordinated production network.
+
+**Success Measures**
+
+- 500 active farmers within five years.
+- 20,000 pigs marketed annually by Year 5.
+- Increased domestic pork availability.
+
+---
+
+### BG-02: Improve Farmer Profitability
+
+Provide farmers with improved genetics, technical support, guaranteed market access, and digital production management tools.
+
+**Success Measures**
+
+- Increase average farmer income.
+- Improve feed conversion efficiency.
+- Reduce mortality rates.
+- Increase average market weight.
+
+---
+
+### BG-03: Strengthen Food Security
+
+Increase local production of safe, high-quality pork products and reduce dependence on imported meat.
+
+**Success Measures**
+
+- Increased domestic market share.
+- Reduced reliance on imported pork products.
+- Improved product availability throughout Lesotho.
+
+---
+
+### BG-04: Build a National Pork Brand
+
+Develop PigPower into a trusted, traceable, premium pork brand recognized for quality, food safety, and sustainability.
+
+**Success Measures**
+
+- Product traceability from farm to consumer.
+- Consistent quality standards.
+- Customer satisfaction and repeat purchases.
+
+---
+
+### BG-05: Promote Environmental Sustainability
+
+Implement circular economy principles by converting pig manure into renewable energy and organic fertilizer.
+
+**Success Measures**
+
+- Biogas generated annually.
+- Organic fertilizer produced.
+- Reduction in unmanaged livestock waste.
+- Lower greenhouse gas emissions.
+
+---
+
+### BG-06: Enable Data-Driven Decision Making
+
+Provide management with accurate operational, financial, and production data.
+
+**Success Measures**
+
+- Real-time dashboards.
+- Automated reporting.
+- Production forecasting.
+- Performance benchmarking.
+
+---
+
+## 3.3 Business Objectives
+
+The software platform shall enable PigPower Lesotho to:
+
+- Digitally register all participating farmers.
+- Maintain accurate records for every farm.
+- Assign a unique identity to every pig.
+- Record the complete lifecycle of each pig.
+- Monitor production performance.
+- Improve disease surveillance.
+- Coordinate logistics.
+- Manage processing operations.
+- Support sales and inventory.
+- Generate management reports.
+- Facilitate future regional expansion.
+
+---
+
+## 3.4 Stakeholder Analysis
+
+| Stakeholder | Role | Primary Interests |
+|--------------|------|-------------------|
+| PigPower Management | Strategic oversight | Growth, profitability, operational visibility |
+| Farmers | Livestock production | Income, support services, guaranteed market |
+| Field Officers | Farmer support | Data quality, farm inspections, onboarding |
+| Veterinary Officers | Animal health | Disease control, treatment records, vaccinations |
+| Processing Staff | Meat production | Efficient slaughter, quality control, traceability |
+| Logistics Officers | Transport | Scheduling, routing, delivery confirmation |
+| Customers | Purchasing | Safe, traceable, quality pork products |
+| BEDCO | Funding partner | Innovation, sustainability, job creation |
+| Government | Regulation | Food safety, compliance, agricultural development |
+| Financial Institutions | Financing | Business performance and reporting |
+
+---
+
+## 3.5 Business Value Proposition
+
+PigPower creates value for multiple stakeholders.
+
+### Farmers
+
+- Guaranteed market access.
+- Better genetics.
+- Veterinary support.
+- Production guidance.
+- Digital records.
+- Business training.
+
+### Consumers
+
+- Safe pork.
+- Traceable products.
+- Consistent quality.
+- Reliable supply.
+
+### Government
+
+- Increased food security.
+- Rural economic development.
+- Employment creation.
+- Import substitution.
+- Environmental sustainability.
+
+### Investors
+
+- Scalable platform business.
+- Diversified revenue streams.
+- Strong ESG profile.
+- Data-driven operations.
+
+---
+
+## 3.6 Business Value Chain
+
+The PigPower business model spans the entire pork value chain.
+
+```text
+Input Supply
+      │
+      ▼
+Farmer Recruitment
+      │
+      ▼
+Training & Onboarding
+      │
+      ▼
+Pig Production
+      │
+      ▼
+Veterinary Services
+      │
+      ▼
+Growth Monitoring
+      │
+      ▼
+Collection
+      │
+      ▼
+Transport
+      │
+      ▼
+Processing
+      │
+      ▼
+Packaging
+      │
+      ▼
+Cold Storage
+      │
+      ▼
+Distribution
+      │
+      ▼
+Retail
+      │
+      ▼
+Consumer
+```
+
+The SmartFarm Platform shall digitally support every stage of this value chain.
+
+---
+
+## 3.7 Business Processes
+
+The system shall support the following end-to-end business processes:
+
+- Farmer onboarding.
+- Farm registration.
+- Pig registration.
+- Feed management.
+- Veterinary service delivery.
+- Weight monitoring.
+- Breeding management.
+- Mortality reporting.
+- Collection scheduling.
+- Processing operations.
+- Product inventory management.
+- Customer order processing.
+- Payment reconciliation.
+- Renewable energy monitoring.
+- Performance reporting.
+
+Each process shall be traceable, auditable, and supported by digital records.
+
+---
+
+## 3.8 Business Rules
+
+The following rules govern system behaviour.
+
+### BR-01
+
+Every farmer shall have a unique Farmer ID.
+
+### BR-02
+
+Every farm shall belong to one registered farmer.
+
+### BR-03
+
+Every pig shall have one unique identification code.
+
+### BR-04
+
+A pig cannot be processed unless it has been received at the processing facility.
+
+### BR-05
+
+Every vaccination record shall reference a registered pig.
+
+### BR-06
+
+Every treatment record shall identify the attending veterinary officer.
+
+### BR-07
+
+Orders shall only be fulfilled if sufficient inventory exists.
+
+### BR-08
+
+Deleted records shall be soft-deleted to preserve audit history.
+
+### BR-09
+
+Every transaction shall record the responsible user and timestamp.
+
+### BR-10
+
+Offline data shall synchronize with the central database without creating duplicate records.
+
+---
+
+## 3.9 Key Performance Indicators (KPIs)
+
+The platform shall calculate and display the following KPIs.
+
+### Farmer Performance
+
+- Number of active farmers.
+- Farmer retention rate.
+- Average farmer income.
+- Farmer productivity.
+
+### Production
+
+- Total pigs registered.
+- Live pigs.
+- Mortality rate.
+- Average daily weight gain.
+- Feed conversion ratio.
+- Average market weight.
+
+### Veterinary
+
+- Vaccination coverage.
+- Disease incidence.
+- Treatment success rate.
+- Response time.
+
+### Processing
+
+- Daily slaughter volume.
+- Carcass yield.
+- Product output by category.
+- Processing efficiency.
+
+### Sales
+
+- Revenue.
+- Gross profit.
+- Inventory turnover.
+- Customer growth.
+
+### Renewable Energy
+
+- Biogas generated.
+- Organic fertilizer produced.
+- Energy cost savings.
+- Estimated carbon emissions avoided.
+
+---
+
+## 3.10 Business Success Metrics
+
+The success of the PigPower platform will be measured using strategic indicators.
+
+| Objective | Metric | Five-Year Target |
+|-----------|--------|------------------|
+| Farmer Network | Active farmers | 500 |
+| Production | Pigs marketed annually | 20,000 |
+| Employment | Direct jobs created | 100+ |
+| Income | Average farmer income growth | >40% |
+| Processing | Local processing capacity | 100% of PigPower production |
+| Renewable Energy | Pig manure converted | >80% |
+| Traceability | Digitally tracked pigs | 100% |
+| System Availability | Platform uptime | 99.5% |
+
+---
+
+## 3.11 Business Constraints
+
+The platform must operate within the following constraints:
+
+- Variable internet connectivity in rural areas.
+- Limited digital literacy among some users.
+- Compliance with national livestock and food safety regulations.
+- Cost-effective deployment using open-source technologies.
+- Gradual expansion of processing capacity.
+- Integration with future hardware such as RFID readers, smart weighing scales, and environmental sensors.
+
+---
+
+## 3.12 Business Requirements Traceability
+
+Every functional requirement defined in Chapter 4 shall be traceable to one or more business goals in this chapter. This traceability ensures that software development effort is aligned with PigPower's strategic objectives and provides a basis for validating that the completed system delivers measurable business value.
