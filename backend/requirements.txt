@@ -1,0 +1,25 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+
+# --- Database (5.2 AD-DB-001: PostgreSQL) ---
+sqlalchemy[asyncio]==2.0.35
+asyncpg==0.29.0
+alembic==1.13.2
+
+# --- Validation / settings ---
+pydantic==2.9.2
+pydantic-settings==2.5.2
+email-validator==2.2.0
+
+# --- Auth (IAPI FR-IAPI-010) ---
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.2.0
+
+# --- File uploads (Documents module) ---
+python-multipart==0.0.9
+
+# --- Testing (5.4 FR-BE-022 equivalent priorities) ---
+pytest==8.3.3
+pytest-asyncio==0.24.0
+httpx==0.27.2

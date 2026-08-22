@@ -1,0 +1,30 @@
+from datetime import datetime, timedelta, timezone
+from typing import Optional
+
+from jose import JWTError, jwt
+from passlib.context import CryptContext
+
+from app.config import settings
+
+_pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+
+def hash_password(password: str) -> str:
+    return _pwd_context.hash(password)
+
+
+def verify_password(plain_password: str, password_hash: str) -> bool:
+    return _pwd_context.verify(plain_password, password_hash)
+
+
+def create_access_token(user_id: str, device_id: str) -> str:
+    expires_at = datetime.now(timezone.utc) + timedelta(minutes=settings.jwt_access_expires_minutes)
+    payload = {"sub": user_id, "device_id": device_id, "exp": expires_at}
+    return jwt.encode(payload, settings.jwt_access_secret, algorithm=settings.jwt_algorithm)
+
+
+def decode_access_token(token: str) -> Optional[dict]:
+    try:
+        return jwt.decode(token, settings.jwt_access_secret, algorithms=[settings.jwt_algorithm])
+    except JWTError:
+        return None
