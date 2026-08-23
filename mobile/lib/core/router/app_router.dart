@@ -9,6 +9,8 @@ import '../../features/farmer/presentation/screens/farmer_list_screen.dart';
 import '../../features/farmer/presentation/screens/farmer_create_screen.dart';
 import '../../features/production/presentation/screens/production_list_screen.dart';
 import '../../features/production/presentation/screens/production_capture_screen.dart';
+import '../../features/veterinary/presentation/screens/veterinary_list_screen.dart';
+import '../../features/veterinary/presentation/screens/veterinary_capture_screen.dart';
 
 /// Declarative routing with role/auth-based redirect guards — 5.6
 /// AD-MOB-004. Screen-level permission checks (e.g. hiding a dashboard
@@ -46,6 +48,13 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const ProductionListScreen(),
         routes: [
           GoRoute(path: 'new', builder: (context, state) => const ProductionCaptureScreen()),
+        ],
+      ),
+      GoRoute(
+        path: '/veterinary',
+        builder: (context, state) => const VeterinaryListScreen(),
+        routes: [
+          GoRoute(path: 'new', builder: (context, state) => const VeterinaryCaptureScreen()),
         ],
       ),
     ],

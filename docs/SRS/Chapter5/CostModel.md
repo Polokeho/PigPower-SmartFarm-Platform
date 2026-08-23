@@ -128,7 +128,6 @@ Then commit it:
 ```
 git add docs/SRS/Chapter5/CostModel.md
 git commit -m "docs: add cost model (chapter 5.10) — closes Chapter 5"
-git push origin develop
 ```
 
 ## 9. Next Steps

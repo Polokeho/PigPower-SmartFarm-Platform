@@ -6,8 +6,9 @@ import '../../../../core/widgets/sync_status_widget.dart';
 
 /// A single dashboard whose CONTENT varies by role, rather than
 /// separate screens/apps per role — 5.6 AD-SYS-003 / FR-MOB-003.
-/// Pass 1 shows the two feature areas built so far (Farmer, Production);
-/// each new module pass adds its own tile here, gated by permission.
+/// Pass 1 shows the three feature areas built so far (Farmer,
+/// Production, Veterinary); each new module pass adds its own tile
+/// here, gated by permission.
 class DashboardScreen extends ConsumerWidget {
   const DashboardScreen({super.key});
 
@@ -37,10 +38,7 @@ class DashboardScreen extends ConsumerWidget {
           if (auth.hasPermission('production.view'))
             _DashboardTile(icon: Icons.agriculture, label: 'Production', onTap: () => context.push('/production')),
           if (auth.hasPermission('veterinary.view'))
-            _DashboardTile(icon: Icons.medical_services, label: 'Veterinary', onTap: () {
-              // Veterinary screens follow the same pattern as Production
-              // and are the next natural addition to this Pass 1 slice.
-            }),
+            _DashboardTile(icon: Icons.medical_services, label: 'Veterinary', onTap: () => context.push('/veterinary')),
         ],
       ),
     );
