@@ -1,9 +1,10 @@
-from fastapi import APIRouter, Depends, Request
+from fastapi import APIRouter, Body, Depends, Request
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.dependencies import get_current_user
 from app.auth.types import AuthenticatedUser
 from app.database.session import get_db
+from app.rate_limit import limiter
 from app.schemas.auth import LoginRequest, RefreshRequest
 from app.services.auth_service import AuthService
 from app.utils.responses import success_envelope
@@ -12,7 +13,8 @@ router = APIRouter(prefix="/v1/auth", tags=["auth"])
 
 
 @router.post("/login")
-async def login(body: LoginRequest, request: Request, db: AsyncSession = Depends(get_db)):
+@limiter.limit("5/minute")
+async def login(request: Request, body: LoginRequest = Body(...), db: AsyncSession = Depends(get_db)):
     result = await AuthService(db).login(body.username, body.password, body.device_id)
     await db.commit()
     return success_envelope(result.model_dump(), request.state.request_id)

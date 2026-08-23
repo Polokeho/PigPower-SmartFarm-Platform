@@ -4,10 +4,14 @@ from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from slowapi import _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
 
 from app.api.v1.router import api_v1_router
+from app.config import settings
 from app.events.audit_listener import register_audit_listener
 from app.middleware.request_id import RequestIdMiddleware
+from app.rate_limit import limiter
 from app.utils.error_codes import ErrorCode
 from app.utils.exceptions import AppException
 from app.utils.responses import error_envelope
@@ -15,9 +19,22 @@ from app.utils.responses import error_envelope
 logging.basicConfig(level=logging.INFO)
 
 app = FastAPI(title="PigPower SmartFarm Platform API", version="0.1.0")
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(RequestIdMiddleware)
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+# FR-SEC-002 — CORS origins now come from configuration rather than a
+# wildcard. cors_allowed_origins defaults to localhost dev addresses only;
+# set CORS_ALLOWED_ORIGINS in .env to a comma-separated list for any real
+# deployment (the mobile app itself is unaffected either way, since CORS
+# is a browser-enforced mechanism, not something native HTTP clients hit —
+# this matters if/when the Admin Web Console from 5.1 §5.2 is built).
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=settings.cors_allowed_origins,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(api_v1_router)
 
