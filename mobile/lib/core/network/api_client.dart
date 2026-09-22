@@ -5,9 +5,20 @@ import '../storage/secure_storage.dart';
 /// Base URL — should come from a build-time/environment config in a real
 /// build (e.g. --dart-define), not hard-coded, per 5.4 FR-BE-017's
 /// credential/config isolation principle applied client-side too.
+///
+/// Default set to the dev PC's LAN IP (its Wi-Fi adapter, from
+/// `ipconfig`) rather than 10.0.2.2, since a physical phone — not the
+/// Android emulator — is the target device here. 10.0.2.2 only resolves
+/// to the host machine from inside the emulator; a real phone needs the
+/// PC's actual address on the same Wi-Fi network, and the backend must
+/// be started with `--host 0.0.0.0` (not the uvicorn default of
+/// 127.0.0.1) so it accepts connections from other devices at all.
+/// This IP changes whenever the PC reconnects to Wi-Fi or switches
+/// networks — rerun `ipconfig` and update this if login ever stops
+/// reaching the backend after a network change.
 const _kBaseUrl = String.fromEnvironment(
   'API_BASE_URL',
-  defaultValue: 'http://10.0.2.2:3000', // Android emulator loopback to localhost
+  defaultValue: 'http://10.198.18.211:8000',
 );
 
 /// The single dio instance used by every feature's remote datasource.

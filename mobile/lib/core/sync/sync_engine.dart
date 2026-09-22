@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:drift/drift.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
+import 'package:drift/drift.dart';
 import '../database/app_database.dart';
 import '../network/api_client.dart';
 
