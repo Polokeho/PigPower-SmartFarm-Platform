@@ -11,158 +11,102 @@ class $FarmersTable extends Farmers with TableInfo<$FarmersTable, Farmer> {
   static const VerificationMeta _idMeta = const VerificationMeta('id');
   @override
   late final GeneratedColumn<String> id = GeneratedColumn<String>(
-    'id',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _serverIdMeta = const VerificationMeta(
-    'serverId',
-  );
+      'id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _serverIdMeta =
+      const VerificationMeta('serverId');
   @override
   late final GeneratedColumn<String> serverId = GeneratedColumn<String>(
-    'server_id',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
-  static const VerificationMeta _farmerNumberMeta = const VerificationMeta(
-    'farmerNumber',
-  );
+      'server_id', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _farmerNumberMeta =
+      const VerificationMeta('farmerNumber');
   @override
   late final GeneratedColumn<String> farmerNumber = GeneratedColumn<String>(
-    'farmer_number',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
+      'farmer_number', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
   static const VerificationMeta _nameMeta = const VerificationMeta('name');
   @override
   late final GeneratedColumn<String> name = GeneratedColumn<String>(
-    'name',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _districtCodeMeta = const VerificationMeta(
-    'districtCode',
-  );
+      'name', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _districtCodeMeta =
+      const VerificationMeta('districtCode');
   @override
   late final GeneratedColumn<String> districtCode = GeneratedColumn<String>(
-    'district_code',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _communityMeta = const VerificationMeta(
-    'community',
-  );
+      'district_code', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _communityMeta =
+      const VerificationMeta('community');
   @override
   late final GeneratedColumn<String> community = GeneratedColumn<String>(
-    'community',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
+      'community', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
   static const VerificationMeta _phoneMeta = const VerificationMeta('phone');
   @override
   late final GeneratedColumn<String> phone = GeneratedColumn<String>(
-    'phone',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
+      'phone', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
   static const VerificationMeta _statusMeta = const VerificationMeta('status');
   @override
   late final GeneratedColumn<String> status = GeneratedColumn<String>(
-    'status',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-    defaultValue: const Constant('PROSPECT'),
-  );
+      'status', aliasedName, false,
+      type: DriftSqlType.string,
+      requiredDuringInsert: false,
+      defaultValue: const Constant('PROSPECT'));
   static const VerificationMeta _documentationCompleteMeta =
       const VerificationMeta('documentationComplete');
   @override
   late final GeneratedColumn<bool> documentationComplete =
-      GeneratedColumn<bool>(
-        'documentation_complete',
-        aliasedName,
-        false,
-        type: DriftSqlType.bool,
-        requiredDuringInsert: false,
-        defaultConstraints: GeneratedColumn.constraintIsAlways(
-          'CHECK ("documentation_complete" IN (0, 1))',
-        ),
-        defaultValue: const Constant(false),
-      );
-  static const VerificationMeta _createdAtMeta = const VerificationMeta(
-    'createdAt',
-  );
+      GeneratedColumn<bool>('documentation_complete', aliasedName, false,
+          type: DriftSqlType.bool,
+          requiredDuringInsert: false,
+          defaultConstraints: GeneratedColumn.constraintIsAlways(
+              'CHECK ("documentation_complete" IN (0, 1))'),
+          defaultValue: const Constant(false));
+  static const VerificationMeta _createdAtMeta =
+      const VerificationMeta('createdAt');
   @override
   late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
-    'created_at',
-    aliasedName,
-    false,
-    type: DriftSqlType.dateTime,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _updatedAtMeta = const VerificationMeta(
-    'updatedAt',
-  );
+      'created_at', aliasedName, false,
+      type: DriftSqlType.dateTime, requiredDuringInsert: true);
+  static const VerificationMeta _updatedAtMeta =
+      const VerificationMeta('updatedAt');
   @override
   late final GeneratedColumn<DateTime> updatedAt = GeneratedColumn<DateTime>(
-    'updated_at',
-    aliasedName,
-    false,
-    type: DriftSqlType.dateTime,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _syncStatusMeta = const VerificationMeta(
-    'syncStatus',
-  );
+      'updated_at', aliasedName, false,
+      type: DriftSqlType.dateTime, requiredDuringInsert: true);
+  static const VerificationMeta _syncStatusMeta =
+      const VerificationMeta('syncStatus');
   @override
   late final GeneratedColumn<String> syncStatus = GeneratedColumn<String>(
-    'sync_status',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-    defaultValue: const Constant('SYNCED'),
-  );
+      'sync_status', aliasedName, false,
+      type: DriftSqlType.string,
+      requiredDuringInsert: false,
+      defaultValue: const Constant('SYNCED'));
   @override
   List<GeneratedColumn> get $columns => [
-    id,
-    serverId,
-    farmerNumber,
-    name,
-    districtCode,
-    community,
-    phone,
-    status,
-    documentationComplete,
-    createdAt,
-    updatedAt,
-    syncStatus,
-  ];
+        id,
+        serverId,
+        farmerNumber,
+        name,
+        districtCode,
+        community,
+        phone,
+        status,
+        documentationComplete,
+        createdAt,
+        updatedAt,
+        syncStatus
+      ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
   String get actualTableName => $name;
   static const String $name = 'farmers';
   @override
-  VerificationContext validateIntegrity(
-    Insertable<Farmer> instance, {
-    bool isInserting = false,
-  }) {
+  VerificationContext validateIntegrity(Insertable<Farmer> instance,
+      {bool isInserting = false}) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
     if (data.containsKey('id')) {
@@ -171,87 +115,64 @@ class $FarmersTable extends Farmers with TableInfo<$FarmersTable, Farmer> {
       context.missing(_idMeta);
     }
     if (data.containsKey('server_id')) {
-      context.handle(
-        _serverIdMeta,
-        serverId.isAcceptableOrUnknown(data['server_id']!, _serverIdMeta),
-      );
+      context.handle(_serverIdMeta,
+          serverId.isAcceptableOrUnknown(data['server_id']!, _serverIdMeta));
     }
     if (data.containsKey('farmer_number')) {
       context.handle(
-        _farmerNumberMeta,
-        farmerNumber.isAcceptableOrUnknown(
-          data['farmer_number']!,
           _farmerNumberMeta,
-        ),
-      );
+          farmerNumber.isAcceptableOrUnknown(
+              data['farmer_number']!, _farmerNumberMeta));
     }
     if (data.containsKey('name')) {
       context.handle(
-        _nameMeta,
-        name.isAcceptableOrUnknown(data['name']!, _nameMeta),
-      );
+          _nameMeta, name.isAcceptableOrUnknown(data['name']!, _nameMeta));
     } else if (isInserting) {
       context.missing(_nameMeta);
     }
     if (data.containsKey('district_code')) {
       context.handle(
-        _districtCodeMeta,
-        districtCode.isAcceptableOrUnknown(
-          data['district_code']!,
           _districtCodeMeta,
-        ),
-      );
+          districtCode.isAcceptableOrUnknown(
+              data['district_code']!, _districtCodeMeta));
     } else if (isInserting) {
       context.missing(_districtCodeMeta);
     }
     if (data.containsKey('community')) {
-      context.handle(
-        _communityMeta,
-        community.isAcceptableOrUnknown(data['community']!, _communityMeta),
-      );
+      context.handle(_communityMeta,
+          community.isAcceptableOrUnknown(data['community']!, _communityMeta));
     }
     if (data.containsKey('phone')) {
       context.handle(
-        _phoneMeta,
-        phone.isAcceptableOrUnknown(data['phone']!, _phoneMeta),
-      );
+          _phoneMeta, phone.isAcceptableOrUnknown(data['phone']!, _phoneMeta));
     }
     if (data.containsKey('status')) {
-      context.handle(
-        _statusMeta,
-        status.isAcceptableOrUnknown(data['status']!, _statusMeta),
-      );
+      context.handle(_statusMeta,
+          status.isAcceptableOrUnknown(data['status']!, _statusMeta));
     }
     if (data.containsKey('documentation_complete')) {
       context.handle(
-        _documentationCompleteMeta,
-        documentationComplete.isAcceptableOrUnknown(
-          data['documentation_complete']!,
           _documentationCompleteMeta,
-        ),
-      );
+          documentationComplete.isAcceptableOrUnknown(
+              data['documentation_complete']!, _documentationCompleteMeta));
     }
     if (data.containsKey('created_at')) {
-      context.handle(
-        _createdAtMeta,
-        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
-      );
+      context.handle(_createdAtMeta,
+          createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta));
     } else if (isInserting) {
       context.missing(_createdAtMeta);
     }
     if (data.containsKey('updated_at')) {
-      context.handle(
-        _updatedAtMeta,
-        updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta),
-      );
+      context.handle(_updatedAtMeta,
+          updatedAt.isAcceptableOrUnknown(data['updated_at']!, _updatedAtMeta));
     } else if (isInserting) {
       context.missing(_updatedAtMeta);
     }
     if (data.containsKey('sync_status')) {
       context.handle(
-        _syncStatusMeta,
-        syncStatus.isAcceptableOrUnknown(data['sync_status']!, _syncStatusMeta),
-      );
+          _syncStatusMeta,
+          syncStatus.isAcceptableOrUnknown(
+              data['sync_status']!, _syncStatusMeta));
     }
     return context;
   }
@@ -262,54 +183,30 @@ class $FarmersTable extends Farmers with TableInfo<$FarmersTable, Farmer> {
   Farmer map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
     return Farmer(
-      id: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}id'],
-      )!,
-      serverId: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}server_id'],
-      ),
-      farmerNumber: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}farmer_number'],
-      ),
-      name: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}name'],
-      )!,
-      districtCode: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}district_code'],
-      )!,
-      community: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}community'],
-      ),
-      phone: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}phone'],
-      ),
-      status: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}status'],
-      )!,
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}id'])!,
+      serverId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}server_id']),
+      farmerNumber: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}farmer_number']),
+      name: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}name'])!,
+      districtCode: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}district_code'])!,
+      community: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}community']),
+      phone: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}phone']),
+      status: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}status'])!,
       documentationComplete: attachedDatabase.typeMapping.read(
-        DriftSqlType.bool,
-        data['${effectivePrefix}documentation_complete'],
-      )!,
-      createdAt: attachedDatabase.typeMapping.read(
-        DriftSqlType.dateTime,
-        data['${effectivePrefix}created_at'],
-      )!,
-      updatedAt: attachedDatabase.typeMapping.read(
-        DriftSqlType.dateTime,
-        data['${effectivePrefix}updated_at'],
-      )!,
-      syncStatus: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}sync_status'],
-      )!,
+          DriftSqlType.bool, data['${effectivePrefix}documentation_complete'])!,
+      createdAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.dateTime, data['${effectivePrefix}created_at'])!,
+      updatedAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.dateTime, data['${effectivePrefix}updated_at'])!,
+      syncStatus: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}sync_status'])!,
     );
   }
 
@@ -339,20 +236,19 @@ class Farmer extends DataClass implements Insertable<Farmer> {
   /// item's status for THIS record specifically, so the UI can show a
   /// per-row sync badge without joining against the outbox table.
   final String syncStatus;
-  const Farmer({
-    required this.id,
-    this.serverId,
-    this.farmerNumber,
-    required this.name,
-    required this.districtCode,
-    this.community,
-    this.phone,
-    required this.status,
-    required this.documentationComplete,
-    required this.createdAt,
-    required this.updatedAt,
-    required this.syncStatus,
-  });
+  const Farmer(
+      {required this.id,
+      this.serverId,
+      this.farmerNumber,
+      required this.name,
+      required this.districtCode,
+      this.community,
+      this.phone,
+      required this.status,
+      required this.documentationComplete,
+      required this.createdAt,
+      required this.updatedAt,
+      required this.syncStatus});
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
@@ -393,9 +289,8 @@ class Farmer extends DataClass implements Insertable<Farmer> {
       community: community == null && nullToAbsent
           ? const Value.absent()
           : Value(community),
-      phone: phone == null && nullToAbsent
-          ? const Value.absent()
-          : Value(phone),
+      phone:
+          phone == null && nullToAbsent ? const Value.absent() : Value(phone),
       status: Value(status),
       documentationComplete: Value(documentationComplete),
       createdAt: Value(createdAt),
@@ -404,10 +299,8 @@ class Farmer extends DataClass implements Insertable<Farmer> {
     );
   }
 
-  factory Farmer.fromJson(
-    Map<String, dynamic> json, {
-    ValueSerializer? serializer,
-  }) {
+  factory Farmer.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return Farmer(
       id: serializer.fromJson<String>(json['id']),
@@ -418,9 +311,8 @@ class Farmer extends DataClass implements Insertable<Farmer> {
       community: serializer.fromJson<String?>(json['community']),
       phone: serializer.fromJson<String?>(json['phone']),
       status: serializer.fromJson<String>(json['status']),
-      documentationComplete: serializer.fromJson<bool>(
-        json['documentationComplete'],
-      ),
+      documentationComplete:
+          serializer.fromJson<bool>(json['documentationComplete']),
       createdAt: serializer.fromJson<DateTime>(json['createdAt']),
       updatedAt: serializer.fromJson<DateTime>(json['updatedAt']),
       syncStatus: serializer.fromJson<String>(json['syncStatus']),
@@ -445,33 +337,35 @@ class Farmer extends DataClass implements Insertable<Farmer> {
     };
   }
 
-  Farmer copyWith({
-    String? id,
-    Value<String?> serverId = const Value.absent(),
-    Value<String?> farmerNumber = const Value.absent(),
-    String? name,
-    String? districtCode,
-    Value<String?> community = const Value.absent(),
-    Value<String?> phone = const Value.absent(),
-    String? status,
-    bool? documentationComplete,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    String? syncStatus,
-  }) => Farmer(
-    id: id ?? this.id,
-    serverId: serverId.present ? serverId.value : this.serverId,
-    farmerNumber: farmerNumber.present ? farmerNumber.value : this.farmerNumber,
-    name: name ?? this.name,
-    districtCode: districtCode ?? this.districtCode,
-    community: community.present ? community.value : this.community,
-    phone: phone.present ? phone.value : this.phone,
-    status: status ?? this.status,
-    documentationComplete: documentationComplete ?? this.documentationComplete,
-    createdAt: createdAt ?? this.createdAt,
-    updatedAt: updatedAt ?? this.updatedAt,
-    syncStatus: syncStatus ?? this.syncStatus,
-  );
+  Farmer copyWith(
+          {String? id,
+          Value<String?> serverId = const Value.absent(),
+          Value<String?> farmerNumber = const Value.absent(),
+          String? name,
+          String? districtCode,
+          Value<String?> community = const Value.absent(),
+          Value<String?> phone = const Value.absent(),
+          String? status,
+          bool? documentationComplete,
+          DateTime? createdAt,
+          DateTime? updatedAt,
+          String? syncStatus}) =>
+      Farmer(
+        id: id ?? this.id,
+        serverId: serverId.present ? serverId.value : this.serverId,
+        farmerNumber:
+            farmerNumber.present ? farmerNumber.value : this.farmerNumber,
+        name: name ?? this.name,
+        districtCode: districtCode ?? this.districtCode,
+        community: community.present ? community.value : this.community,
+        phone: phone.present ? phone.value : this.phone,
+        status: status ?? this.status,
+        documentationComplete:
+            documentationComplete ?? this.documentationComplete,
+        createdAt: createdAt ?? this.createdAt,
+        updatedAt: updatedAt ?? this.updatedAt,
+        syncStatus: syncStatus ?? this.syncStatus,
+      );
   Farmer copyWithCompanion(FarmersCompanion data) {
     return Farmer(
       id: data.id.present ? data.id.value : this.id,
@@ -491,9 +385,8 @@ class Farmer extends DataClass implements Insertable<Farmer> {
           : this.documentationComplete,
       createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
       updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
-      syncStatus: data.syncStatus.present
-          ? data.syncStatus.value
-          : this.syncStatus,
+      syncStatus:
+          data.syncStatus.present ? data.syncStatus.value : this.syncStatus,
     );
   }
 
@@ -518,19 +411,18 @@ class Farmer extends DataClass implements Insertable<Farmer> {
 
   @override
   int get hashCode => Object.hash(
-    id,
-    serverId,
-    farmerNumber,
-    name,
-    districtCode,
-    community,
-    phone,
-    status,
-    documentationComplete,
-    createdAt,
-    updatedAt,
-    syncStatus,
-  );
+      id,
+      serverId,
+      farmerNumber,
+      name,
+      districtCode,
+      community,
+      phone,
+      status,
+      documentationComplete,
+      createdAt,
+      updatedAt,
+      syncStatus);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -592,11 +484,11 @@ class FarmersCompanion extends UpdateCompanion<Farmer> {
     required DateTime updatedAt,
     this.syncStatus = const Value.absent(),
     this.rowid = const Value.absent(),
-  }) : id = Value(id),
-       name = Value(name),
-       districtCode = Value(districtCode),
-       createdAt = Value(createdAt),
-       updatedAt = Value(updatedAt);
+  })  : id = Value(id),
+        name = Value(name),
+        districtCode = Value(districtCode),
+        createdAt = Value(createdAt),
+        updatedAt = Value(updatedAt);
   static Insertable<Farmer> custom({
     Expression<String>? id,
     Expression<String>? serverId,
@@ -630,21 +522,20 @@ class FarmersCompanion extends UpdateCompanion<Farmer> {
     });
   }
 
-  FarmersCompanion copyWith({
-    Value<String>? id,
-    Value<String?>? serverId,
-    Value<String?>? farmerNumber,
-    Value<String>? name,
-    Value<String>? districtCode,
-    Value<String?>? community,
-    Value<String?>? phone,
-    Value<String>? status,
-    Value<bool>? documentationComplete,
-    Value<DateTime>? createdAt,
-    Value<DateTime>? updatedAt,
-    Value<String>? syncStatus,
-    Value<int>? rowid,
-  }) {
+  FarmersCompanion copyWith(
+      {Value<String>? id,
+      Value<String?>? serverId,
+      Value<String?>? farmerNumber,
+      Value<String>? name,
+      Value<String>? districtCode,
+      Value<String?>? community,
+      Value<String?>? phone,
+      Value<String>? status,
+      Value<bool>? documentationComplete,
+      Value<DateTime>? createdAt,
+      Value<DateTime>? updatedAt,
+      Value<String>? syncStatus,
+      Value<int>? rowid}) {
     return FarmersCompanion(
       id: id ?? this.id,
       serverId: serverId ?? this.serverId,
@@ -691,9 +582,8 @@ class FarmersCompanion extends UpdateCompanion<Farmer> {
       map['status'] = Variable<String>(status.value);
     }
     if (documentationComplete.present) {
-      map['documentation_complete'] = Variable<bool>(
-        documentationComplete.value,
-      );
+      map['documentation_complete'] =
+          Variable<bool>(documentationComplete.value);
     }
     if (createdAt.present) {
       map['created_at'] = Variable<DateTime>(createdAt.value);
@@ -740,142 +630,91 @@ class $ProductionBatchesTable extends ProductionBatches
   static const VerificationMeta _idMeta = const VerificationMeta('id');
   @override
   late final GeneratedColumn<String> id = GeneratedColumn<String>(
-    'id',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _serverIdMeta = const VerificationMeta(
-    'serverId',
-  );
+      'id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _serverIdMeta =
+      const VerificationMeta('serverId');
   @override
   late final GeneratedColumn<String> serverId = GeneratedColumn<String>(
-    'server_id',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
-  static const VerificationMeta _batchNumberMeta = const VerificationMeta(
-    'batchNumber',
-  );
+      'server_id', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _batchNumberMeta =
+      const VerificationMeta('batchNumber');
   @override
   late final GeneratedColumn<String> batchNumber = GeneratedColumn<String>(
-    'batch_number',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
+      'batch_number', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
   static const VerificationMeta _farmIdMeta = const VerificationMeta('farmId');
   @override
   late final GeneratedColumn<String> farmId = GeneratedColumn<String>(
-    'farm_id',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _pigIdsJsonMeta = const VerificationMeta(
-    'pigIdsJson',
-  );
+      'farm_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _pigIdsJsonMeta =
+      const VerificationMeta('pigIdsJson');
   @override
   late final GeneratedColumn<String> pigIdsJson = GeneratedColumn<String>(
-    'pig_ids_json',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _weightKgMeta = const VerificationMeta(
-    'weightKg',
-  );
+      'pig_ids_json', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _weightKgMeta =
+      const VerificationMeta('weightKg');
   @override
   late final GeneratedColumn<double> weightKg = GeneratedColumn<double>(
-    'weight_kg',
-    aliasedName,
-    true,
-    type: DriftSqlType.double,
-    requiredDuringInsert: false,
-  );
-  static const VerificationMeta _recordedAtMeta = const VerificationMeta(
-    'recordedAt',
-  );
+      'weight_kg', aliasedName, true,
+      type: DriftSqlType.double, requiredDuringInsert: false);
+  static const VerificationMeta _recordedAtMeta =
+      const VerificationMeta('recordedAt');
   @override
   late final GeneratedColumn<DateTime> recordedAt = GeneratedColumn<DateTime>(
-    'recorded_at',
-    aliasedName,
-    false,
-    type: DriftSqlType.dateTime,
-    requiredDuringInsert: true,
-  );
+      'recorded_at', aliasedName, false,
+      type: DriftSqlType.dateTime, requiredDuringInsert: true);
   static const VerificationMeta _notesMeta = const VerificationMeta('notes');
   @override
   late final GeneratedColumn<String> notes = GeneratedColumn<String>(
-    'notes',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
+      'notes', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
   static const VerificationMeta _statusMeta = const VerificationMeta('status');
   @override
   late final GeneratedColumn<String> status = GeneratedColumn<String>(
-    'status',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-    defaultValue: const Constant('RECORDED'),
-  );
-  static const VerificationMeta _createdAtMeta = const VerificationMeta(
-    'createdAt',
-  );
+      'status', aliasedName, false,
+      type: DriftSqlType.string,
+      requiredDuringInsert: false,
+      defaultValue: const Constant('RECORDED'));
+  static const VerificationMeta _createdAtMeta =
+      const VerificationMeta('createdAt');
   @override
   late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
-    'created_at',
-    aliasedName,
-    false,
-    type: DriftSqlType.dateTime,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _syncStatusMeta = const VerificationMeta(
-    'syncStatus',
-  );
+      'created_at', aliasedName, false,
+      type: DriftSqlType.dateTime, requiredDuringInsert: true);
+  static const VerificationMeta _syncStatusMeta =
+      const VerificationMeta('syncStatus');
   @override
   late final GeneratedColumn<String> syncStatus = GeneratedColumn<String>(
-    'sync_status',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-    defaultValue: const Constant('PENDING_SYNC'),
-  );
+      'sync_status', aliasedName, false,
+      type: DriftSqlType.string,
+      requiredDuringInsert: false,
+      defaultValue: const Constant('PENDING_SYNC'));
   @override
   List<GeneratedColumn> get $columns => [
-    id,
-    serverId,
-    batchNumber,
-    farmId,
-    pigIdsJson,
-    weightKg,
-    recordedAt,
-    notes,
-    status,
-    createdAt,
-    syncStatus,
-  ];
+        id,
+        serverId,
+        batchNumber,
+        farmId,
+        pigIdsJson,
+        weightKg,
+        recordedAt,
+        notes,
+        status,
+        createdAt,
+        syncStatus
+      ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
   String get actualTableName => $name;
   static const String $name = 'production_batches';
   @override
-  VerificationContext validateIntegrity(
-    Insertable<ProductionBatche> instance, {
-    bool isInserting = false,
-  }) {
+  VerificationContext validateIntegrity(Insertable<ProductionBatche> instance,
+      {bool isInserting = false}) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
     if (data.containsKey('id')) {
@@ -884,78 +723,60 @@ class $ProductionBatchesTable extends ProductionBatches
       context.missing(_idMeta);
     }
     if (data.containsKey('server_id')) {
-      context.handle(
-        _serverIdMeta,
-        serverId.isAcceptableOrUnknown(data['server_id']!, _serverIdMeta),
-      );
+      context.handle(_serverIdMeta,
+          serverId.isAcceptableOrUnknown(data['server_id']!, _serverIdMeta));
     }
     if (data.containsKey('batch_number')) {
       context.handle(
-        _batchNumberMeta,
-        batchNumber.isAcceptableOrUnknown(
-          data['batch_number']!,
           _batchNumberMeta,
-        ),
-      );
+          batchNumber.isAcceptableOrUnknown(
+              data['batch_number']!, _batchNumberMeta));
     }
     if (data.containsKey('farm_id')) {
-      context.handle(
-        _farmIdMeta,
-        farmId.isAcceptableOrUnknown(data['farm_id']!, _farmIdMeta),
-      );
+      context.handle(_farmIdMeta,
+          farmId.isAcceptableOrUnknown(data['farm_id']!, _farmIdMeta));
     } else if (isInserting) {
       context.missing(_farmIdMeta);
     }
     if (data.containsKey('pig_ids_json')) {
       context.handle(
-        _pigIdsJsonMeta,
-        pigIdsJson.isAcceptableOrUnknown(
-          data['pig_ids_json']!,
           _pigIdsJsonMeta,
-        ),
-      );
+          pigIdsJson.isAcceptableOrUnknown(
+              data['pig_ids_json']!, _pigIdsJsonMeta));
     } else if (isInserting) {
       context.missing(_pigIdsJsonMeta);
     }
     if (data.containsKey('weight_kg')) {
-      context.handle(
-        _weightKgMeta,
-        weightKg.isAcceptableOrUnknown(data['weight_kg']!, _weightKgMeta),
-      );
+      context.handle(_weightKgMeta,
+          weightKg.isAcceptableOrUnknown(data['weight_kg']!, _weightKgMeta));
     }
     if (data.containsKey('recorded_at')) {
       context.handle(
-        _recordedAtMeta,
-        recordedAt.isAcceptableOrUnknown(data['recorded_at']!, _recordedAtMeta),
-      );
+          _recordedAtMeta,
+          recordedAt.isAcceptableOrUnknown(
+              data['recorded_at']!, _recordedAtMeta));
     } else if (isInserting) {
       context.missing(_recordedAtMeta);
     }
     if (data.containsKey('notes')) {
       context.handle(
-        _notesMeta,
-        notes.isAcceptableOrUnknown(data['notes']!, _notesMeta),
-      );
+          _notesMeta, notes.isAcceptableOrUnknown(data['notes']!, _notesMeta));
     }
     if (data.containsKey('status')) {
-      context.handle(
-        _statusMeta,
-        status.isAcceptableOrUnknown(data['status']!, _statusMeta),
-      );
+      context.handle(_statusMeta,
+          status.isAcceptableOrUnknown(data['status']!, _statusMeta));
     }
     if (data.containsKey('created_at')) {
-      context.handle(
-        _createdAtMeta,
-        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
-      );
+      context.handle(_createdAtMeta,
+          createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta));
     } else if (isInserting) {
       context.missing(_createdAtMeta);
     }
     if (data.containsKey('sync_status')) {
       context.handle(
-        _syncStatusMeta,
-        syncStatus.isAcceptableOrUnknown(data['sync_status']!, _syncStatusMeta),
-      );
+          _syncStatusMeta,
+          syncStatus.isAcceptableOrUnknown(
+              data['sync_status']!, _syncStatusMeta));
     }
     return context;
   }
@@ -966,50 +787,28 @@ class $ProductionBatchesTable extends ProductionBatches
   ProductionBatche map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
     return ProductionBatche(
-      id: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}id'],
-      )!,
-      serverId: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}server_id'],
-      ),
-      batchNumber: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}batch_number'],
-      ),
-      farmId: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}farm_id'],
-      )!,
-      pigIdsJson: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}pig_ids_json'],
-      )!,
-      weightKg: attachedDatabase.typeMapping.read(
-        DriftSqlType.double,
-        data['${effectivePrefix}weight_kg'],
-      ),
-      recordedAt: attachedDatabase.typeMapping.read(
-        DriftSqlType.dateTime,
-        data['${effectivePrefix}recorded_at'],
-      )!,
-      notes: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}notes'],
-      ),
-      status: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}status'],
-      )!,
-      createdAt: attachedDatabase.typeMapping.read(
-        DriftSqlType.dateTime,
-        data['${effectivePrefix}created_at'],
-      )!,
-      syncStatus: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}sync_status'],
-      )!,
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}id'])!,
+      serverId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}server_id']),
+      batchNumber: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}batch_number']),
+      farmId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}farm_id'])!,
+      pigIdsJson: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}pig_ids_json'])!,
+      weightKg: attachedDatabase.typeMapping
+          .read(DriftSqlType.double, data['${effectivePrefix}weight_kg']),
+      recordedAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.dateTime, data['${effectivePrefix}recorded_at'])!,
+      notes: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}notes']),
+      status: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}status'])!,
+      createdAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.dateTime, data['${effectivePrefix}created_at'])!,
+      syncStatus: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}sync_status'])!,
     );
   }
 
@@ -1032,19 +831,18 @@ class ProductionBatche extends DataClass
   final String status;
   final DateTime createdAt;
   final String syncStatus;
-  const ProductionBatche({
-    required this.id,
-    this.serverId,
-    this.batchNumber,
-    required this.farmId,
-    required this.pigIdsJson,
-    this.weightKg,
-    required this.recordedAt,
-    this.notes,
-    required this.status,
-    required this.createdAt,
-    required this.syncStatus,
-  });
+  const ProductionBatche(
+      {required this.id,
+      this.serverId,
+      this.batchNumber,
+      required this.farmId,
+      required this.pigIdsJson,
+      this.weightKg,
+      required this.recordedAt,
+      this.notes,
+      required this.status,
+      required this.createdAt,
+      required this.syncStatus});
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
@@ -1085,19 +883,16 @@ class ProductionBatche extends DataClass
           ? const Value.absent()
           : Value(weightKg),
       recordedAt: Value(recordedAt),
-      notes: notes == null && nullToAbsent
-          ? const Value.absent()
-          : Value(notes),
+      notes:
+          notes == null && nullToAbsent ? const Value.absent() : Value(notes),
       status: Value(status),
       createdAt: Value(createdAt),
       syncStatus: Value(syncStatus),
     );
   }
 
-  factory ProductionBatche.fromJson(
-    Map<String, dynamic> json, {
-    ValueSerializer? serializer,
-  }) {
+  factory ProductionBatche.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return ProductionBatche(
       id: serializer.fromJson<String>(json['id']),
@@ -1131,52 +926,48 @@ class ProductionBatche extends DataClass
     };
   }
 
-  ProductionBatche copyWith({
-    String? id,
-    Value<String?> serverId = const Value.absent(),
-    Value<String?> batchNumber = const Value.absent(),
-    String? farmId,
-    String? pigIdsJson,
-    Value<double?> weightKg = const Value.absent(),
-    DateTime? recordedAt,
-    Value<String?> notes = const Value.absent(),
-    String? status,
-    DateTime? createdAt,
-    String? syncStatus,
-  }) => ProductionBatche(
-    id: id ?? this.id,
-    serverId: serverId.present ? serverId.value : this.serverId,
-    batchNumber: batchNumber.present ? batchNumber.value : this.batchNumber,
-    farmId: farmId ?? this.farmId,
-    pigIdsJson: pigIdsJson ?? this.pigIdsJson,
-    weightKg: weightKg.present ? weightKg.value : this.weightKg,
-    recordedAt: recordedAt ?? this.recordedAt,
-    notes: notes.present ? notes.value : this.notes,
-    status: status ?? this.status,
-    createdAt: createdAt ?? this.createdAt,
-    syncStatus: syncStatus ?? this.syncStatus,
-  );
+  ProductionBatche copyWith(
+          {String? id,
+          Value<String?> serverId = const Value.absent(),
+          Value<String?> batchNumber = const Value.absent(),
+          String? farmId,
+          String? pigIdsJson,
+          Value<double?> weightKg = const Value.absent(),
+          DateTime? recordedAt,
+          Value<String?> notes = const Value.absent(),
+          String? status,
+          DateTime? createdAt,
+          String? syncStatus}) =>
+      ProductionBatche(
+        id: id ?? this.id,
+        serverId: serverId.present ? serverId.value : this.serverId,
+        batchNumber: batchNumber.present ? batchNumber.value : this.batchNumber,
+        farmId: farmId ?? this.farmId,
+        pigIdsJson: pigIdsJson ?? this.pigIdsJson,
+        weightKg: weightKg.present ? weightKg.value : this.weightKg,
+        recordedAt: recordedAt ?? this.recordedAt,
+        notes: notes.present ? notes.value : this.notes,
+        status: status ?? this.status,
+        createdAt: createdAt ?? this.createdAt,
+        syncStatus: syncStatus ?? this.syncStatus,
+      );
   ProductionBatche copyWithCompanion(ProductionBatchesCompanion data) {
     return ProductionBatche(
       id: data.id.present ? data.id.value : this.id,
       serverId: data.serverId.present ? data.serverId.value : this.serverId,
-      batchNumber: data.batchNumber.present
-          ? data.batchNumber.value
-          : this.batchNumber,
+      batchNumber:
+          data.batchNumber.present ? data.batchNumber.value : this.batchNumber,
       farmId: data.farmId.present ? data.farmId.value : this.farmId,
-      pigIdsJson: data.pigIdsJson.present
-          ? data.pigIdsJson.value
-          : this.pigIdsJson,
+      pigIdsJson:
+          data.pigIdsJson.present ? data.pigIdsJson.value : this.pigIdsJson,
       weightKg: data.weightKg.present ? data.weightKg.value : this.weightKg,
-      recordedAt: data.recordedAt.present
-          ? data.recordedAt.value
-          : this.recordedAt,
+      recordedAt:
+          data.recordedAt.present ? data.recordedAt.value : this.recordedAt,
       notes: data.notes.present ? data.notes.value : this.notes,
       status: data.status.present ? data.status.value : this.status,
       createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
-      syncStatus: data.syncStatus.present
-          ? data.syncStatus.value
-          : this.syncStatus,
+      syncStatus:
+          data.syncStatus.present ? data.syncStatus.value : this.syncStatus,
     );
   }
 
@@ -1199,19 +990,8 @@ class ProductionBatche extends DataClass
   }
 
   @override
-  int get hashCode => Object.hash(
-    id,
-    serverId,
-    batchNumber,
-    farmId,
-    pigIdsJson,
-    weightKg,
-    recordedAt,
-    notes,
-    status,
-    createdAt,
-    syncStatus,
-  );
+  int get hashCode => Object.hash(id, serverId, batchNumber, farmId, pigIdsJson,
+      weightKg, recordedAt, notes, status, createdAt, syncStatus);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -1269,11 +1049,11 @@ class ProductionBatchesCompanion extends UpdateCompanion<ProductionBatche> {
     required DateTime createdAt,
     this.syncStatus = const Value.absent(),
     this.rowid = const Value.absent(),
-  }) : id = Value(id),
-       farmId = Value(farmId),
-       pigIdsJson = Value(pigIdsJson),
-       recordedAt = Value(recordedAt),
-       createdAt = Value(createdAt);
+  })  : id = Value(id),
+        farmId = Value(farmId),
+        pigIdsJson = Value(pigIdsJson),
+        recordedAt = Value(recordedAt),
+        createdAt = Value(createdAt);
   static Insertable<ProductionBatche> custom({
     Expression<String>? id,
     Expression<String>? serverId,
@@ -1304,20 +1084,19 @@ class ProductionBatchesCompanion extends UpdateCompanion<ProductionBatche> {
     });
   }
 
-  ProductionBatchesCompanion copyWith({
-    Value<String>? id,
-    Value<String?>? serverId,
-    Value<String?>? batchNumber,
-    Value<String>? farmId,
-    Value<String>? pigIdsJson,
-    Value<double?>? weightKg,
-    Value<DateTime>? recordedAt,
-    Value<String?>? notes,
-    Value<String>? status,
-    Value<DateTime>? createdAt,
-    Value<String>? syncStatus,
-    Value<int>? rowid,
-  }) {
+  ProductionBatchesCompanion copyWith(
+      {Value<String>? id,
+      Value<String?>? serverId,
+      Value<String?>? batchNumber,
+      Value<String>? farmId,
+      Value<String>? pigIdsJson,
+      Value<double?>? weightKg,
+      Value<DateTime>? recordedAt,
+      Value<String?>? notes,
+      Value<String>? status,
+      Value<DateTime>? createdAt,
+      Value<String>? syncStatus,
+      Value<int>? rowid}) {
     return ProductionBatchesCompanion(
       id: id ?? this.id,
       serverId: serverId ?? this.serverId,
@@ -1405,130 +1184,82 @@ class $VeterinaryRecordsTable extends VeterinaryRecords
   static const VerificationMeta _idMeta = const VerificationMeta('id');
   @override
   late final GeneratedColumn<String> id = GeneratedColumn<String>(
-    'id',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _serverIdMeta = const VerificationMeta(
-    'serverId',
-  );
+      'id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _serverIdMeta =
+      const VerificationMeta('serverId');
   @override
   late final GeneratedColumn<String> serverId = GeneratedColumn<String>(
-    'server_id',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
-  static const VerificationMeta _recordNumberMeta = const VerificationMeta(
-    'recordNumber',
-  );
+      'server_id', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _recordNumberMeta =
+      const VerificationMeta('recordNumber');
   @override
   late final GeneratedColumn<String> recordNumber = GeneratedColumn<String>(
-    'record_number',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
+      'record_number', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
   static const VerificationMeta _pigIdMeta = const VerificationMeta('pigId');
   @override
   late final GeneratedColumn<String> pigId = GeneratedColumn<String>(
-    'pig_id',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
+      'pig_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
   static const VerificationMeta _typeMeta = const VerificationMeta('type');
   @override
   late final GeneratedColumn<String> type = GeneratedColumn<String>(
-    'type',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _vaccineTypeCodeMeta = const VerificationMeta(
-    'vaccineTypeCode',
-  );
+      'type', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _vaccineTypeCodeMeta =
+      const VerificationMeta('vaccineTypeCode');
   @override
   late final GeneratedColumn<String> vaccineTypeCode = GeneratedColumn<String>(
-    'vaccine_type_code',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
-  static const VerificationMeta _administeredAtMeta = const VerificationMeta(
-    'administeredAt',
-  );
+      'vaccine_type_code', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _administeredAtMeta =
+      const VerificationMeta('administeredAt');
   @override
   late final GeneratedColumn<DateTime> administeredAt =
-      GeneratedColumn<DateTime>(
-        'administered_at',
-        aliasedName,
-        false,
-        type: DriftSqlType.dateTime,
-        requiredDuringInsert: true,
-      );
+      GeneratedColumn<DateTime>('administered_at', aliasedName, false,
+          type: DriftSqlType.dateTime, requiredDuringInsert: true);
   static const VerificationMeta _notesMeta = const VerificationMeta('notes');
   @override
   late final GeneratedColumn<String> notes = GeneratedColumn<String>(
-    'notes',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
-  static const VerificationMeta _createdAtMeta = const VerificationMeta(
-    'createdAt',
-  );
+      'notes', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
+  static const VerificationMeta _createdAtMeta =
+      const VerificationMeta('createdAt');
   @override
   late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
-    'created_at',
-    aliasedName,
-    false,
-    type: DriftSqlType.dateTime,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _syncStatusMeta = const VerificationMeta(
-    'syncStatus',
-  );
+      'created_at', aliasedName, false,
+      type: DriftSqlType.dateTime, requiredDuringInsert: true);
+  static const VerificationMeta _syncStatusMeta =
+      const VerificationMeta('syncStatus');
   @override
   late final GeneratedColumn<String> syncStatus = GeneratedColumn<String>(
-    'sync_status',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-    defaultValue: const Constant('PENDING_SYNC'),
-  );
+      'sync_status', aliasedName, false,
+      type: DriftSqlType.string,
+      requiredDuringInsert: false,
+      defaultValue: const Constant('PENDING_SYNC'));
   @override
   List<GeneratedColumn> get $columns => [
-    id,
-    serverId,
-    recordNumber,
-    pigId,
-    type,
-    vaccineTypeCode,
-    administeredAt,
-    notes,
-    createdAt,
-    syncStatus,
-  ];
+        id,
+        serverId,
+        recordNumber,
+        pigId,
+        type,
+        vaccineTypeCode,
+        administeredAt,
+        notes,
+        createdAt,
+        syncStatus
+      ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
   String get actualTableName => $name;
   static const String $name = 'veterinary_records';
   @override
-  VerificationContext validateIntegrity(
-    Insertable<VeterinaryRecord> instance, {
-    bool isInserting = false,
-  }) {
+  VerificationContext validateIntegrity(Insertable<VeterinaryRecord> instance,
+      {bool isInserting = false}) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
     if (data.containsKey('id')) {
@@ -1537,75 +1268,56 @@ class $VeterinaryRecordsTable extends VeterinaryRecords
       context.missing(_idMeta);
     }
     if (data.containsKey('server_id')) {
-      context.handle(
-        _serverIdMeta,
-        serverId.isAcceptableOrUnknown(data['server_id']!, _serverIdMeta),
-      );
+      context.handle(_serverIdMeta,
+          serverId.isAcceptableOrUnknown(data['server_id']!, _serverIdMeta));
     }
     if (data.containsKey('record_number')) {
       context.handle(
-        _recordNumberMeta,
-        recordNumber.isAcceptableOrUnknown(
-          data['record_number']!,
           _recordNumberMeta,
-        ),
-      );
+          recordNumber.isAcceptableOrUnknown(
+              data['record_number']!, _recordNumberMeta));
     }
     if (data.containsKey('pig_id')) {
       context.handle(
-        _pigIdMeta,
-        pigId.isAcceptableOrUnknown(data['pig_id']!, _pigIdMeta),
-      );
+          _pigIdMeta, pigId.isAcceptableOrUnknown(data['pig_id']!, _pigIdMeta));
     } else if (isInserting) {
       context.missing(_pigIdMeta);
     }
     if (data.containsKey('type')) {
       context.handle(
-        _typeMeta,
-        type.isAcceptableOrUnknown(data['type']!, _typeMeta),
-      );
+          _typeMeta, type.isAcceptableOrUnknown(data['type']!, _typeMeta));
     } else if (isInserting) {
       context.missing(_typeMeta);
     }
     if (data.containsKey('vaccine_type_code')) {
       context.handle(
-        _vaccineTypeCodeMeta,
-        vaccineTypeCode.isAcceptableOrUnknown(
-          data['vaccine_type_code']!,
           _vaccineTypeCodeMeta,
-        ),
-      );
+          vaccineTypeCode.isAcceptableOrUnknown(
+              data['vaccine_type_code']!, _vaccineTypeCodeMeta));
     }
     if (data.containsKey('administered_at')) {
       context.handle(
-        _administeredAtMeta,
-        administeredAt.isAcceptableOrUnknown(
-          data['administered_at']!,
           _administeredAtMeta,
-        ),
-      );
+          administeredAt.isAcceptableOrUnknown(
+              data['administered_at']!, _administeredAtMeta));
     } else if (isInserting) {
       context.missing(_administeredAtMeta);
     }
     if (data.containsKey('notes')) {
       context.handle(
-        _notesMeta,
-        notes.isAcceptableOrUnknown(data['notes']!, _notesMeta),
-      );
+          _notesMeta, notes.isAcceptableOrUnknown(data['notes']!, _notesMeta));
     }
     if (data.containsKey('created_at')) {
-      context.handle(
-        _createdAtMeta,
-        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
-      );
+      context.handle(_createdAtMeta,
+          createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta));
     } else if (isInserting) {
       context.missing(_createdAtMeta);
     }
     if (data.containsKey('sync_status')) {
       context.handle(
-        _syncStatusMeta,
-        syncStatus.isAcceptableOrUnknown(data['sync_status']!, _syncStatusMeta),
-      );
+          _syncStatusMeta,
+          syncStatus.isAcceptableOrUnknown(
+              data['sync_status']!, _syncStatusMeta));
     }
     return context;
   }
@@ -1616,46 +1328,26 @@ class $VeterinaryRecordsTable extends VeterinaryRecords
   VeterinaryRecord map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
     return VeterinaryRecord(
-      id: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}id'],
-      )!,
-      serverId: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}server_id'],
-      ),
-      recordNumber: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}record_number'],
-      ),
-      pigId: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}pig_id'],
-      )!,
-      type: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}type'],
-      )!,
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}id'])!,
+      serverId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}server_id']),
+      recordNumber: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}record_number']),
+      pigId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}pig_id'])!,
+      type: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}type'])!,
       vaccineTypeCode: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}vaccine_type_code'],
-      ),
+          DriftSqlType.string, data['${effectivePrefix}vaccine_type_code']),
       administeredAt: attachedDatabase.typeMapping.read(
-        DriftSqlType.dateTime,
-        data['${effectivePrefix}administered_at'],
-      )!,
-      notes: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}notes'],
-      ),
-      createdAt: attachedDatabase.typeMapping.read(
-        DriftSqlType.dateTime,
-        data['${effectivePrefix}created_at'],
-      )!,
-      syncStatus: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}sync_status'],
-      )!,
+          DriftSqlType.dateTime, data['${effectivePrefix}administered_at'])!,
+      notes: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}notes']),
+      createdAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.dateTime, data['${effectivePrefix}created_at'])!,
+      syncStatus: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}sync_status'])!,
     );
   }
 
@@ -1677,18 +1369,17 @@ class VeterinaryRecord extends DataClass
   final String? notes;
   final DateTime createdAt;
   final String syncStatus;
-  const VeterinaryRecord({
-    required this.id,
-    this.serverId,
-    this.recordNumber,
-    required this.pigId,
-    required this.type,
-    this.vaccineTypeCode,
-    required this.administeredAt,
-    this.notes,
-    required this.createdAt,
-    required this.syncStatus,
-  });
+  const VeterinaryRecord(
+      {required this.id,
+      this.serverId,
+      this.recordNumber,
+      required this.pigId,
+      required this.type,
+      this.vaccineTypeCode,
+      required this.administeredAt,
+      this.notes,
+      required this.createdAt,
+      required this.syncStatus});
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
@@ -1728,18 +1419,15 @@ class VeterinaryRecord extends DataClass
           ? const Value.absent()
           : Value(vaccineTypeCode),
       administeredAt: Value(administeredAt),
-      notes: notes == null && nullToAbsent
-          ? const Value.absent()
-          : Value(notes),
+      notes:
+          notes == null && nullToAbsent ? const Value.absent() : Value(notes),
       createdAt: Value(createdAt),
       syncStatus: Value(syncStatus),
     );
   }
 
-  factory VeterinaryRecord.fromJson(
-    Map<String, dynamic> json, {
-    ValueSerializer? serializer,
-  }) {
+  factory VeterinaryRecord.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return VeterinaryRecord(
       id: serializer.fromJson<String>(json['id']),
@@ -1771,31 +1459,32 @@ class VeterinaryRecord extends DataClass
     };
   }
 
-  VeterinaryRecord copyWith({
-    String? id,
-    Value<String?> serverId = const Value.absent(),
-    Value<String?> recordNumber = const Value.absent(),
-    String? pigId,
-    String? type,
-    Value<String?> vaccineTypeCode = const Value.absent(),
-    DateTime? administeredAt,
-    Value<String?> notes = const Value.absent(),
-    DateTime? createdAt,
-    String? syncStatus,
-  }) => VeterinaryRecord(
-    id: id ?? this.id,
-    serverId: serverId.present ? serverId.value : this.serverId,
-    recordNumber: recordNumber.present ? recordNumber.value : this.recordNumber,
-    pigId: pigId ?? this.pigId,
-    type: type ?? this.type,
-    vaccineTypeCode: vaccineTypeCode.present
-        ? vaccineTypeCode.value
-        : this.vaccineTypeCode,
-    administeredAt: administeredAt ?? this.administeredAt,
-    notes: notes.present ? notes.value : this.notes,
-    createdAt: createdAt ?? this.createdAt,
-    syncStatus: syncStatus ?? this.syncStatus,
-  );
+  VeterinaryRecord copyWith(
+          {String? id,
+          Value<String?> serverId = const Value.absent(),
+          Value<String?> recordNumber = const Value.absent(),
+          String? pigId,
+          String? type,
+          Value<String?> vaccineTypeCode = const Value.absent(),
+          DateTime? administeredAt,
+          Value<String?> notes = const Value.absent(),
+          DateTime? createdAt,
+          String? syncStatus}) =>
+      VeterinaryRecord(
+        id: id ?? this.id,
+        serverId: serverId.present ? serverId.value : this.serverId,
+        recordNumber:
+            recordNumber.present ? recordNumber.value : this.recordNumber,
+        pigId: pigId ?? this.pigId,
+        type: type ?? this.type,
+        vaccineTypeCode: vaccineTypeCode.present
+            ? vaccineTypeCode.value
+            : this.vaccineTypeCode,
+        administeredAt: administeredAt ?? this.administeredAt,
+        notes: notes.present ? notes.value : this.notes,
+        createdAt: createdAt ?? this.createdAt,
+        syncStatus: syncStatus ?? this.syncStatus,
+      );
   VeterinaryRecord copyWithCompanion(VeterinaryRecordsCompanion data) {
     return VeterinaryRecord(
       id: data.id.present ? data.id.value : this.id,
@@ -1813,9 +1502,8 @@ class VeterinaryRecord extends DataClass
           : this.administeredAt,
       notes: data.notes.present ? data.notes.value : this.notes,
       createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
-      syncStatus: data.syncStatus.present
-          ? data.syncStatus.value
-          : this.syncStatus,
+      syncStatus:
+          data.syncStatus.present ? data.syncStatus.value : this.syncStatus,
     );
   }
 
@@ -1837,18 +1525,8 @@ class VeterinaryRecord extends DataClass
   }
 
   @override
-  int get hashCode => Object.hash(
-    id,
-    serverId,
-    recordNumber,
-    pigId,
-    type,
-    vaccineTypeCode,
-    administeredAt,
-    notes,
-    createdAt,
-    syncStatus,
-  );
+  int get hashCode => Object.hash(id, serverId, recordNumber, pigId, type,
+      vaccineTypeCode, administeredAt, notes, createdAt, syncStatus);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -1902,11 +1580,11 @@ class VeterinaryRecordsCompanion extends UpdateCompanion<VeterinaryRecord> {
     required DateTime createdAt,
     this.syncStatus = const Value.absent(),
     this.rowid = const Value.absent(),
-  }) : id = Value(id),
-       pigId = Value(pigId),
-       type = Value(type),
-       administeredAt = Value(administeredAt),
-       createdAt = Value(createdAt);
+  })  : id = Value(id),
+        pigId = Value(pigId),
+        type = Value(type),
+        administeredAt = Value(administeredAt),
+        createdAt = Value(createdAt);
   static Insertable<VeterinaryRecord> custom({
     Expression<String>? id,
     Expression<String>? serverId,
@@ -1935,19 +1613,18 @@ class VeterinaryRecordsCompanion extends UpdateCompanion<VeterinaryRecord> {
     });
   }
 
-  VeterinaryRecordsCompanion copyWith({
-    Value<String>? id,
-    Value<String?>? serverId,
-    Value<String?>? recordNumber,
-    Value<String>? pigId,
-    Value<String>? type,
-    Value<String?>? vaccineTypeCode,
-    Value<DateTime>? administeredAt,
-    Value<String?>? notes,
-    Value<DateTime>? createdAt,
-    Value<String>? syncStatus,
-    Value<int>? rowid,
-  }) {
+  VeterinaryRecordsCompanion copyWith(
+      {Value<String>? id,
+      Value<String?>? serverId,
+      Value<String?>? recordNumber,
+      Value<String>? pigId,
+      Value<String>? type,
+      Value<String?>? vaccineTypeCode,
+      Value<DateTime>? administeredAt,
+      Value<String?>? notes,
+      Value<DateTime>? createdAt,
+      Value<String>? syncStatus,
+      Value<int>? rowid}) {
     return VeterinaryRecordsCompanion(
       id: id ?? this.id,
       serverId: serverId ?? this.serverId,
@@ -2030,153 +1707,101 @@ class $OutboxItemsTable extends OutboxItems
   static const VerificationMeta _idMeta = const VerificationMeta('id');
   @override
   late final GeneratedColumn<int> id = GeneratedColumn<int>(
-    'id',
-    aliasedName,
-    false,
-    hasAutoIncrement: true,
-    type: DriftSqlType.int,
-    requiredDuringInsert: false,
-    defaultConstraints: GeneratedColumn.constraintIsAlways(
-      'PRIMARY KEY AUTOINCREMENT',
-    ),
-  );
-  static const VerificationMeta _entityTypeMeta = const VerificationMeta(
-    'entityType',
-  );
+      'id', aliasedName, false,
+      hasAutoIncrement: true,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultConstraints:
+          GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
+  static const VerificationMeta _entityTypeMeta =
+      const VerificationMeta('entityType');
   @override
   late final GeneratedColumn<String> entityType = GeneratedColumn<String>(
-    'entity_type',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _clientIdMeta = const VerificationMeta(
-    'clientId',
-  );
+      'entity_type', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _clientIdMeta =
+      const VerificationMeta('clientId');
   @override
   late final GeneratedColumn<String> clientId = GeneratedColumn<String>(
-    'client_id',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _idempotencyKeyMeta = const VerificationMeta(
-    'idempotencyKey',
-  );
+      'client_id', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _idempotencyKeyMeta =
+      const VerificationMeta('idempotencyKey');
   @override
   late final GeneratedColumn<String> idempotencyKey = GeneratedColumn<String>(
-    'idempotency_key',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-    defaultConstraints: GeneratedColumn.constraintIsAlways('UNIQUE'),
-  );
-  static const VerificationMeta _payloadJsonMeta = const VerificationMeta(
-    'payloadJson',
-  );
+      'idempotency_key', aliasedName, false,
+      type: DriftSqlType.string,
+      requiredDuringInsert: true,
+      defaultConstraints: GeneratedColumn.constraintIsAlways('UNIQUE'));
+  static const VerificationMeta _payloadJsonMeta =
+      const VerificationMeta('payloadJson');
   @override
   late final GeneratedColumn<String> payloadJson = GeneratedColumn<String>(
-    'payload_json',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _priorityTierMeta = const VerificationMeta(
-    'priorityTier',
-  );
+      'payload_json', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _priorityTierMeta =
+      const VerificationMeta('priorityTier');
   @override
   late final GeneratedColumn<int> priorityTier = GeneratedColumn<int>(
-    'priority_tier',
-    aliasedName,
-    false,
-    type: DriftSqlType.int,
-    requiredDuringInsert: false,
-    defaultValue: const Constant(3),
-  );
+      'priority_tier', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(3));
   static const VerificationMeta _statusMeta = const VerificationMeta('status');
   @override
   late final GeneratedColumn<String> status = GeneratedColumn<String>(
-    'status',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-    defaultValue: const Constant('QUEUED'),
-  );
-  static const VerificationMeta _retryCountMeta = const VerificationMeta(
-    'retryCount',
-  );
+      'status', aliasedName, false,
+      type: DriftSqlType.string,
+      requiredDuringInsert: false,
+      defaultValue: const Constant('QUEUED'));
+  static const VerificationMeta _retryCountMeta =
+      const VerificationMeta('retryCount');
   @override
   late final GeneratedColumn<int> retryCount = GeneratedColumn<int>(
-    'retry_count',
-    aliasedName,
-    false,
-    type: DriftSqlType.int,
-    requiredDuringInsert: false,
-    defaultValue: const Constant(0),
-  );
-  static const VerificationMeta _createdAtMeta = const VerificationMeta(
-    'createdAt',
-  );
+      'retry_count', aliasedName, false,
+      type: DriftSqlType.int,
+      requiredDuringInsert: false,
+      defaultValue: const Constant(0));
+  static const VerificationMeta _createdAtMeta =
+      const VerificationMeta('createdAt');
   @override
   late final GeneratedColumn<DateTime> createdAt = GeneratedColumn<DateTime>(
-    'created_at',
-    aliasedName,
-    false,
-    type: DriftSqlType.dateTime,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _lastAttemptAtMeta = const VerificationMeta(
-    'lastAttemptAt',
-  );
+      'created_at', aliasedName, false,
+      type: DriftSqlType.dateTime, requiredDuringInsert: true);
+  static const VerificationMeta _lastAttemptAtMeta =
+      const VerificationMeta('lastAttemptAt');
   @override
   late final GeneratedColumn<DateTime> lastAttemptAt =
-      GeneratedColumn<DateTime>(
-        'last_attempt_at',
-        aliasedName,
-        true,
-        type: DriftSqlType.dateTime,
-        requiredDuringInsert: false,
-      );
-  static const VerificationMeta _errorMessageMeta = const VerificationMeta(
-    'errorMessage',
-  );
+      GeneratedColumn<DateTime>('last_attempt_at', aliasedName, true,
+          type: DriftSqlType.dateTime, requiredDuringInsert: false);
+  static const VerificationMeta _errorMessageMeta =
+      const VerificationMeta('errorMessage');
   @override
   late final GeneratedColumn<String> errorMessage = GeneratedColumn<String>(
-    'error_message',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
+      'error_message', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
   @override
   List<GeneratedColumn> get $columns => [
-    id,
-    entityType,
-    clientId,
-    idempotencyKey,
-    payloadJson,
-    priorityTier,
-    status,
-    retryCount,
-    createdAt,
-    lastAttemptAt,
-    errorMessage,
-  ];
+        id,
+        entityType,
+        clientId,
+        idempotencyKey,
+        payloadJson,
+        priorityTier,
+        status,
+        retryCount,
+        createdAt,
+        lastAttemptAt,
+        errorMessage
+      ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
   String get actualTableName => $name;
   static const String $name = 'outbox_items';
   @override
-  VerificationContext validateIntegrity(
-    Insertable<OutboxItem> instance, {
-    bool isInserting = false,
-  }) {
+  VerificationContext validateIntegrity(Insertable<OutboxItem> instance,
+      {bool isInserting = false}) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
     if (data.containsKey('id')) {
@@ -2184,88 +1809,67 @@ class $OutboxItemsTable extends OutboxItems
     }
     if (data.containsKey('entity_type')) {
       context.handle(
-        _entityTypeMeta,
-        entityType.isAcceptableOrUnknown(data['entity_type']!, _entityTypeMeta),
-      );
+          _entityTypeMeta,
+          entityType.isAcceptableOrUnknown(
+              data['entity_type']!, _entityTypeMeta));
     } else if (isInserting) {
       context.missing(_entityTypeMeta);
     }
     if (data.containsKey('client_id')) {
-      context.handle(
-        _clientIdMeta,
-        clientId.isAcceptableOrUnknown(data['client_id']!, _clientIdMeta),
-      );
+      context.handle(_clientIdMeta,
+          clientId.isAcceptableOrUnknown(data['client_id']!, _clientIdMeta));
     } else if (isInserting) {
       context.missing(_clientIdMeta);
     }
     if (data.containsKey('idempotency_key')) {
       context.handle(
-        _idempotencyKeyMeta,
-        idempotencyKey.isAcceptableOrUnknown(
-          data['idempotency_key']!,
           _idempotencyKeyMeta,
-        ),
-      );
+          idempotencyKey.isAcceptableOrUnknown(
+              data['idempotency_key']!, _idempotencyKeyMeta));
     } else if (isInserting) {
       context.missing(_idempotencyKeyMeta);
     }
     if (data.containsKey('payload_json')) {
       context.handle(
-        _payloadJsonMeta,
-        payloadJson.isAcceptableOrUnknown(
-          data['payload_json']!,
           _payloadJsonMeta,
-        ),
-      );
+          payloadJson.isAcceptableOrUnknown(
+              data['payload_json']!, _payloadJsonMeta));
     } else if (isInserting) {
       context.missing(_payloadJsonMeta);
     }
     if (data.containsKey('priority_tier')) {
       context.handle(
-        _priorityTierMeta,
-        priorityTier.isAcceptableOrUnknown(
-          data['priority_tier']!,
           _priorityTierMeta,
-        ),
-      );
+          priorityTier.isAcceptableOrUnknown(
+              data['priority_tier']!, _priorityTierMeta));
     }
     if (data.containsKey('status')) {
-      context.handle(
-        _statusMeta,
-        status.isAcceptableOrUnknown(data['status']!, _statusMeta),
-      );
+      context.handle(_statusMeta,
+          status.isAcceptableOrUnknown(data['status']!, _statusMeta));
     }
     if (data.containsKey('retry_count')) {
       context.handle(
-        _retryCountMeta,
-        retryCount.isAcceptableOrUnknown(data['retry_count']!, _retryCountMeta),
-      );
+          _retryCountMeta,
+          retryCount.isAcceptableOrUnknown(
+              data['retry_count']!, _retryCountMeta));
     }
     if (data.containsKey('created_at')) {
-      context.handle(
-        _createdAtMeta,
-        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
-      );
+      context.handle(_createdAtMeta,
+          createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta));
     } else if (isInserting) {
       context.missing(_createdAtMeta);
     }
     if (data.containsKey('last_attempt_at')) {
       context.handle(
-        _lastAttemptAtMeta,
-        lastAttemptAt.isAcceptableOrUnknown(
-          data['last_attempt_at']!,
           _lastAttemptAtMeta,
-        ),
-      );
+          lastAttemptAt.isAcceptableOrUnknown(
+              data['last_attempt_at']!, _lastAttemptAtMeta));
     }
     if (data.containsKey('error_message')) {
       context.handle(
-        _errorMessageMeta,
-        errorMessage.isAcceptableOrUnknown(
-          data['error_message']!,
           _errorMessageMeta,
-        ),
-      );
+          errorMessage.isAcceptableOrUnknown(
+              data['error_message']!, _errorMessageMeta));
     }
     return context;
   }
@@ -2276,50 +1880,28 @@ class $OutboxItemsTable extends OutboxItems
   OutboxItem map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
     return OutboxItem(
-      id: attachedDatabase.typeMapping.read(
-        DriftSqlType.int,
-        data['${effectivePrefix}id'],
-      )!,
-      entityType: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}entity_type'],
-      )!,
-      clientId: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}client_id'],
-      )!,
+      id: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}id'])!,
+      entityType: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}entity_type'])!,
+      clientId: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}client_id'])!,
       idempotencyKey: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}idempotency_key'],
-      )!,
-      payloadJson: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}payload_json'],
-      )!,
-      priorityTier: attachedDatabase.typeMapping.read(
-        DriftSqlType.int,
-        data['${effectivePrefix}priority_tier'],
-      )!,
-      status: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}status'],
-      )!,
-      retryCount: attachedDatabase.typeMapping.read(
-        DriftSqlType.int,
-        data['${effectivePrefix}retry_count'],
-      )!,
-      createdAt: attachedDatabase.typeMapping.read(
-        DriftSqlType.dateTime,
-        data['${effectivePrefix}created_at'],
-      )!,
+          DriftSqlType.string, data['${effectivePrefix}idempotency_key'])!,
+      payloadJson: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}payload_json'])!,
+      priorityTier: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}priority_tier'])!,
+      status: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}status'])!,
+      retryCount: attachedDatabase.typeMapping
+          .read(DriftSqlType.int, data['${effectivePrefix}retry_count'])!,
+      createdAt: attachedDatabase.typeMapping
+          .read(DriftSqlType.dateTime, data['${effectivePrefix}created_at'])!,
       lastAttemptAt: attachedDatabase.typeMapping.read(
-        DriftSqlType.dateTime,
-        data['${effectivePrefix}last_attempt_at'],
-      ),
-      errorMessage: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}error_message'],
-      ),
+          DriftSqlType.dateTime, data['${effectivePrefix}last_attempt_at']),
+      errorMessage: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}error_message']),
     );
   }
 
@@ -2346,19 +1928,18 @@ class OutboxItem extends DataClass implements Insertable<OutboxItem> {
   final DateTime createdAt;
   final DateTime? lastAttemptAt;
   final String? errorMessage;
-  const OutboxItem({
-    required this.id,
-    required this.entityType,
-    required this.clientId,
-    required this.idempotencyKey,
-    required this.payloadJson,
-    required this.priorityTier,
-    required this.status,
-    required this.retryCount,
-    required this.createdAt,
-    this.lastAttemptAt,
-    this.errorMessage,
-  });
+  const OutboxItem(
+      {required this.id,
+      required this.entityType,
+      required this.clientId,
+      required this.idempotencyKey,
+      required this.payloadJson,
+      required this.priorityTier,
+      required this.status,
+      required this.retryCount,
+      required this.createdAt,
+      this.lastAttemptAt,
+      this.errorMessage});
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
@@ -2400,10 +1981,8 @@ class OutboxItem extends DataClass implements Insertable<OutboxItem> {
     );
   }
 
-  factory OutboxItem.fromJson(
-    Map<String, dynamic> json, {
-    ValueSerializer? serializer,
-  }) {
+  factory OutboxItem.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return OutboxItem(
       id: serializer.fromJson<int>(json['id']),
@@ -2437,53 +2016,50 @@ class OutboxItem extends DataClass implements Insertable<OutboxItem> {
     };
   }
 
-  OutboxItem copyWith({
-    int? id,
-    String? entityType,
-    String? clientId,
-    String? idempotencyKey,
-    String? payloadJson,
-    int? priorityTier,
-    String? status,
-    int? retryCount,
-    DateTime? createdAt,
-    Value<DateTime?> lastAttemptAt = const Value.absent(),
-    Value<String?> errorMessage = const Value.absent(),
-  }) => OutboxItem(
-    id: id ?? this.id,
-    entityType: entityType ?? this.entityType,
-    clientId: clientId ?? this.clientId,
-    idempotencyKey: idempotencyKey ?? this.idempotencyKey,
-    payloadJson: payloadJson ?? this.payloadJson,
-    priorityTier: priorityTier ?? this.priorityTier,
-    status: status ?? this.status,
-    retryCount: retryCount ?? this.retryCount,
-    createdAt: createdAt ?? this.createdAt,
-    lastAttemptAt: lastAttemptAt.present
-        ? lastAttemptAt.value
-        : this.lastAttemptAt,
-    errorMessage: errorMessage.present ? errorMessage.value : this.errorMessage,
-  );
+  OutboxItem copyWith(
+          {int? id,
+          String? entityType,
+          String? clientId,
+          String? idempotencyKey,
+          String? payloadJson,
+          int? priorityTier,
+          String? status,
+          int? retryCount,
+          DateTime? createdAt,
+          Value<DateTime?> lastAttemptAt = const Value.absent(),
+          Value<String?> errorMessage = const Value.absent()}) =>
+      OutboxItem(
+        id: id ?? this.id,
+        entityType: entityType ?? this.entityType,
+        clientId: clientId ?? this.clientId,
+        idempotencyKey: idempotencyKey ?? this.idempotencyKey,
+        payloadJson: payloadJson ?? this.payloadJson,
+        priorityTier: priorityTier ?? this.priorityTier,
+        status: status ?? this.status,
+        retryCount: retryCount ?? this.retryCount,
+        createdAt: createdAt ?? this.createdAt,
+        lastAttemptAt:
+            lastAttemptAt.present ? lastAttemptAt.value : this.lastAttemptAt,
+        errorMessage:
+            errorMessage.present ? errorMessage.value : this.errorMessage,
+      );
   OutboxItem copyWithCompanion(OutboxItemsCompanion data) {
     return OutboxItem(
       id: data.id.present ? data.id.value : this.id,
-      entityType: data.entityType.present
-          ? data.entityType.value
-          : this.entityType,
+      entityType:
+          data.entityType.present ? data.entityType.value : this.entityType,
       clientId: data.clientId.present ? data.clientId.value : this.clientId,
       idempotencyKey: data.idempotencyKey.present
           ? data.idempotencyKey.value
           : this.idempotencyKey,
-      payloadJson: data.payloadJson.present
-          ? data.payloadJson.value
-          : this.payloadJson,
+      payloadJson:
+          data.payloadJson.present ? data.payloadJson.value : this.payloadJson,
       priorityTier: data.priorityTier.present
           ? data.priorityTier.value
           : this.priorityTier,
       status: data.status.present ? data.status.value : this.status,
-      retryCount: data.retryCount.present
-          ? data.retryCount.value
-          : this.retryCount,
+      retryCount:
+          data.retryCount.present ? data.retryCount.value : this.retryCount,
       createdAt: data.createdAt.present ? data.createdAt.value : this.createdAt,
       lastAttemptAt: data.lastAttemptAt.present
           ? data.lastAttemptAt.value
@@ -2514,18 +2090,17 @@ class OutboxItem extends DataClass implements Insertable<OutboxItem> {
 
   @override
   int get hashCode => Object.hash(
-    id,
-    entityType,
-    clientId,
-    idempotencyKey,
-    payloadJson,
-    priorityTier,
-    status,
-    retryCount,
-    createdAt,
-    lastAttemptAt,
-    errorMessage,
-  );
+      id,
+      entityType,
+      clientId,
+      idempotencyKey,
+      payloadJson,
+      priorityTier,
+      status,
+      retryCount,
+      createdAt,
+      lastAttemptAt,
+      errorMessage);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -2580,11 +2155,11 @@ class OutboxItemsCompanion extends UpdateCompanion<OutboxItem> {
     required DateTime createdAt,
     this.lastAttemptAt = const Value.absent(),
     this.errorMessage = const Value.absent(),
-  }) : entityType = Value(entityType),
-       clientId = Value(clientId),
-       idempotencyKey = Value(idempotencyKey),
-       payloadJson = Value(payloadJson),
-       createdAt = Value(createdAt);
+  })  : entityType = Value(entityType),
+        clientId = Value(clientId),
+        idempotencyKey = Value(idempotencyKey),
+        payloadJson = Value(payloadJson),
+        createdAt = Value(createdAt);
   static Insertable<OutboxItem> custom({
     Expression<int>? id,
     Expression<String>? entityType,
@@ -2613,19 +2188,18 @@ class OutboxItemsCompanion extends UpdateCompanion<OutboxItem> {
     });
   }
 
-  OutboxItemsCompanion copyWith({
-    Value<int>? id,
-    Value<String>? entityType,
-    Value<String>? clientId,
-    Value<String>? idempotencyKey,
-    Value<String>? payloadJson,
-    Value<int>? priorityTier,
-    Value<String>? status,
-    Value<int>? retryCount,
-    Value<DateTime>? createdAt,
-    Value<DateTime?>? lastAttemptAt,
-    Value<String?>? errorMessage,
-  }) {
+  OutboxItemsCompanion copyWith(
+      {Value<int>? id,
+      Value<String>? entityType,
+      Value<String>? clientId,
+      Value<String>? idempotencyKey,
+      Value<String>? payloadJson,
+      Value<int>? priorityTier,
+      Value<String>? status,
+      Value<int>? retryCount,
+      Value<DateTime>? createdAt,
+      Value<DateTime?>? lastAttemptAt,
+      Value<String?>? errorMessage}) {
     return OutboxItemsCompanion(
       id: id ?? this.id,
       entityType: entityType ?? this.entityType,
@@ -2705,100 +2279,66 @@ class $LookupValuesTable extends LookupValues
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
   $LookupValuesTable(this.attachedDatabase, [this._alias]);
-  static const VerificationMeta _lookupTableCodeMeta = const VerificationMeta(
-    'lookupTableCode',
-  );
+  static const VerificationMeta _lookupTableCodeMeta =
+      const VerificationMeta('lookupTableCode');
   @override
   late final GeneratedColumn<String> lookupTableCode = GeneratedColumn<String>(
-    'lookup_table_code',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
+      'lookup_table_code', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
   static const VerificationMeta _codeMeta = const VerificationMeta('code');
   @override
   late final GeneratedColumn<String> code = GeneratedColumn<String>(
-    'code',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
+      'code', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
   static const VerificationMeta _labelMeta = const VerificationMeta('label');
   @override
   late final GeneratedColumn<String> label = GeneratedColumn<String>(
-    'label',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
-  static const VerificationMeta _metadataJsonMeta = const VerificationMeta(
-    'metadataJson',
-  );
+      'label', aliasedName, false,
+      type: DriftSqlType.string, requiredDuringInsert: true);
+  static const VerificationMeta _metadataJsonMeta =
+      const VerificationMeta('metadataJson');
   @override
   late final GeneratedColumn<String> metadataJson = GeneratedColumn<String>(
-    'metadata_json',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  );
+      'metadata_json', aliasedName, true,
+      type: DriftSqlType.string, requiredDuringInsert: false);
   @override
-  List<GeneratedColumn> get $columns => [
-    lookupTableCode,
-    code,
-    label,
-    metadataJson,
-  ];
+  List<GeneratedColumn> get $columns =>
+      [lookupTableCode, code, label, metadataJson];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
   String get actualTableName => $name;
   static const String $name = 'lookup_values';
   @override
-  VerificationContext validateIntegrity(
-    Insertable<LookupValue> instance, {
-    bool isInserting = false,
-  }) {
+  VerificationContext validateIntegrity(Insertable<LookupValue> instance,
+      {bool isInserting = false}) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
     if (data.containsKey('lookup_table_code')) {
       context.handle(
-        _lookupTableCodeMeta,
-        lookupTableCode.isAcceptableOrUnknown(
-          data['lookup_table_code']!,
           _lookupTableCodeMeta,
-        ),
-      );
+          lookupTableCode.isAcceptableOrUnknown(
+              data['lookup_table_code']!, _lookupTableCodeMeta));
     } else if (isInserting) {
       context.missing(_lookupTableCodeMeta);
     }
     if (data.containsKey('code')) {
       context.handle(
-        _codeMeta,
-        code.isAcceptableOrUnknown(data['code']!, _codeMeta),
-      );
+          _codeMeta, code.isAcceptableOrUnknown(data['code']!, _codeMeta));
     } else if (isInserting) {
       context.missing(_codeMeta);
     }
     if (data.containsKey('label')) {
       context.handle(
-        _labelMeta,
-        label.isAcceptableOrUnknown(data['label']!, _labelMeta),
-      );
+          _labelMeta, label.isAcceptableOrUnknown(data['label']!, _labelMeta));
     } else if (isInserting) {
       context.missing(_labelMeta);
     }
     if (data.containsKey('metadata_json')) {
       context.handle(
-        _metadataJsonMeta,
-        metadataJson.isAcceptableOrUnknown(
-          data['metadata_json']!,
           _metadataJsonMeta,
-        ),
-      );
+          metadataJson.isAcceptableOrUnknown(
+              data['metadata_json']!, _metadataJsonMeta));
     }
     return context;
   }
@@ -2810,21 +2350,13 @@ class $LookupValuesTable extends LookupValues
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
     return LookupValue(
       lookupTableCode: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}lookup_table_code'],
-      )!,
-      code: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}code'],
-      )!,
-      label: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}label'],
-      )!,
-      metadataJson: attachedDatabase.typeMapping.read(
-        DriftSqlType.string,
-        data['${effectivePrefix}metadata_json'],
-      ),
+          DriftSqlType.string, data['${effectivePrefix}lookup_table_code'])!,
+      code: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}code'])!,
+      label: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}label'])!,
+      metadataJson: attachedDatabase.typeMapping
+          .read(DriftSqlType.string, data['${effectivePrefix}metadata_json']),
     );
   }
 
@@ -2839,12 +2371,11 @@ class LookupValue extends DataClass implements Insertable<LookupValue> {
   final String code;
   final String label;
   final String? metadataJson;
-  const LookupValue({
-    required this.lookupTableCode,
-    required this.code,
-    required this.label,
-    this.metadataJson,
-  });
+  const LookupValue(
+      {required this.lookupTableCode,
+      required this.code,
+      required this.label,
+      this.metadataJson});
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
@@ -2868,10 +2399,8 @@ class LookupValue extends DataClass implements Insertable<LookupValue> {
     );
   }
 
-  factory LookupValue.fromJson(
-    Map<String, dynamic> json, {
-    ValueSerializer? serializer,
-  }) {
+  factory LookupValue.fromJson(Map<String, dynamic> json,
+      {ValueSerializer? serializer}) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return LookupValue(
       lookupTableCode: serializer.fromJson<String>(json['lookupTableCode']),
@@ -2891,17 +2420,18 @@ class LookupValue extends DataClass implements Insertable<LookupValue> {
     };
   }
 
-  LookupValue copyWith({
-    String? lookupTableCode,
-    String? code,
-    String? label,
-    Value<String?> metadataJson = const Value.absent(),
-  }) => LookupValue(
-    lookupTableCode: lookupTableCode ?? this.lookupTableCode,
-    code: code ?? this.code,
-    label: label ?? this.label,
-    metadataJson: metadataJson.present ? metadataJson.value : this.metadataJson,
-  );
+  LookupValue copyWith(
+          {String? lookupTableCode,
+          String? code,
+          String? label,
+          Value<String?> metadataJson = const Value.absent()}) =>
+      LookupValue(
+        lookupTableCode: lookupTableCode ?? this.lookupTableCode,
+        code: code ?? this.code,
+        label: label ?? this.label,
+        metadataJson:
+            metadataJson.present ? metadataJson.value : this.metadataJson,
+      );
   LookupValue copyWithCompanion(LookupValuesCompanion data) {
     return LookupValue(
       lookupTableCode: data.lookupTableCode.present
@@ -2957,9 +2487,9 @@ class LookupValuesCompanion extends UpdateCompanion<LookupValue> {
     required String label,
     this.metadataJson = const Value.absent(),
     this.rowid = const Value.absent(),
-  }) : lookupTableCode = Value(lookupTableCode),
-       code = Value(code),
-       label = Value(label);
+  })  : lookupTableCode = Value(lookupTableCode),
+        code = Value(code),
+        label = Value(label);
   static Insertable<LookupValue> custom({
     Expression<String>? lookupTableCode,
     Expression<String>? code,
@@ -2976,13 +2506,12 @@ class LookupValuesCompanion extends UpdateCompanion<LookupValue> {
     });
   }
 
-  LookupValuesCompanion copyWith({
-    Value<String>? lookupTableCode,
-    Value<String>? code,
-    Value<String>? label,
-    Value<String?>? metadataJson,
-    Value<int>? rowid,
-  }) {
+  LookupValuesCompanion copyWith(
+      {Value<String>? lookupTableCode,
+      Value<String>? code,
+      Value<String>? label,
+      Value<String?>? metadataJson,
+      Value<int>? rowid}) {
     return LookupValuesCompanion(
       lookupTableCode: lookupTableCode ?? this.lookupTableCode,
       code: code ?? this.code,
@@ -3041,46 +2570,44 @@ abstract class _$AppDatabase extends GeneratedDatabase {
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
   @override
   List<DatabaseSchemaEntity> get allSchemaEntities => [
-    farmers,
-    productionBatches,
-    veterinaryRecords,
-    outboxItems,
-    lookupValues,
-  ];
+        farmers,
+        productionBatches,
+        veterinaryRecords,
+        outboxItems,
+        lookupValues
+      ];
 }
 
-typedef $$FarmersTableCreateCompanionBuilder =
-    FarmersCompanion Function({
-      required String id,
-      Value<String?> serverId,
-      Value<String?> farmerNumber,
-      required String name,
-      required String districtCode,
-      Value<String?> community,
-      Value<String?> phone,
-      Value<String> status,
-      Value<bool> documentationComplete,
-      required DateTime createdAt,
-      required DateTime updatedAt,
-      Value<String> syncStatus,
-      Value<int> rowid,
-    });
-typedef $$FarmersTableUpdateCompanionBuilder =
-    FarmersCompanion Function({
-      Value<String> id,
-      Value<String?> serverId,
-      Value<String?> farmerNumber,
-      Value<String> name,
-      Value<String> districtCode,
-      Value<String?> community,
-      Value<String?> phone,
-      Value<String> status,
-      Value<bool> documentationComplete,
-      Value<DateTime> createdAt,
-      Value<DateTime> updatedAt,
-      Value<String> syncStatus,
-      Value<int> rowid,
-    });
+typedef $$FarmersTableCreateCompanionBuilder = FarmersCompanion Function({
+  required String id,
+  Value<String?> serverId,
+  Value<String?> farmerNumber,
+  required String name,
+  required String districtCode,
+  Value<String?> community,
+  Value<String?> phone,
+  Value<String> status,
+  Value<bool> documentationComplete,
+  required DateTime createdAt,
+  required DateTime updatedAt,
+  Value<String> syncStatus,
+  Value<int> rowid,
+});
+typedef $$FarmersTableUpdateCompanionBuilder = FarmersCompanion Function({
+  Value<String> id,
+  Value<String?> serverId,
+  Value<String?> farmerNumber,
+  Value<String> name,
+  Value<String> districtCode,
+  Value<String?> community,
+  Value<String?> phone,
+  Value<String> status,
+  Value<bool> documentationComplete,
+  Value<DateTime> createdAt,
+  Value<DateTime> updatedAt,
+  Value<String> syncStatus,
+  Value<int> rowid,
+});
 
 class $$FarmersTableFilterComposer
     extends Composer<_$AppDatabase, $FarmersTable> {
@@ -3092,64 +2619,41 @@ class $$FarmersTableFilterComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnFilters<String> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.id, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get serverId => $composableBuilder(
-    column: $table.serverId,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.serverId, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get farmerNumber => $composableBuilder(
-    column: $table.farmerNumber,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.farmerNumber, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get name => $composableBuilder(
-    column: $table.name,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.name, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get districtCode => $composableBuilder(
-    column: $table.districtCode,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.districtCode, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get community => $composableBuilder(
-    column: $table.community,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.community, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get phone => $composableBuilder(
-    column: $table.phone,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.phone, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get status => $composableBuilder(
-    column: $table.status,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.status, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<bool> get documentationComplete => $composableBuilder(
-    column: $table.documentationComplete,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.documentationComplete,
+      builder: (column) => ColumnFilters(column));
 
   ColumnFilters<DateTime> get createdAt => $composableBuilder(
-    column: $table.createdAt,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.createdAt, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<DateTime> get updatedAt => $composableBuilder(
-    column: $table.updatedAt,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.updatedAt, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get syncStatus => $composableBuilder(
-    column: $table.syncStatus,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.syncStatus, builder: (column) => ColumnFilters(column));
 }
 
 class $$FarmersTableOrderingComposer
@@ -3162,64 +2666,43 @@ class $$FarmersTableOrderingComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnOrderings<String> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.id, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get serverId => $composableBuilder(
-    column: $table.serverId,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.serverId, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get farmerNumber => $composableBuilder(
-    column: $table.farmerNumber,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.farmerNumber,
+      builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get name => $composableBuilder(
-    column: $table.name,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.name, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get districtCode => $composableBuilder(
-    column: $table.districtCode,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.districtCode,
+      builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get community => $composableBuilder(
-    column: $table.community,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.community, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get phone => $composableBuilder(
-    column: $table.phone,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.phone, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get status => $composableBuilder(
-    column: $table.status,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.status, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<bool> get documentationComplete => $composableBuilder(
-    column: $table.documentationComplete,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.documentationComplete,
+      builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<DateTime> get createdAt => $composableBuilder(
-    column: $table.createdAt,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.createdAt, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
-    column: $table.updatedAt,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.updatedAt, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get syncStatus => $composableBuilder(
-    column: $table.syncStatus,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.syncStatus, builder: (column) => ColumnOrderings(column));
 }
 
 class $$FarmersTableAnnotationComposer
@@ -3238,17 +2721,13 @@ class $$FarmersTableAnnotationComposer
       $composableBuilder(column: $table.serverId, builder: (column) => column);
 
   GeneratedColumn<String> get farmerNumber => $composableBuilder(
-    column: $table.farmerNumber,
-    builder: (column) => column,
-  );
+      column: $table.farmerNumber, builder: (column) => column);
 
   GeneratedColumn<String> get name =>
       $composableBuilder(column: $table.name, builder: (column) => column);
 
   GeneratedColumn<String> get districtCode => $composableBuilder(
-    column: $table.districtCode,
-    builder: (column) => column,
-  );
+      column: $table.districtCode, builder: (column) => column);
 
   GeneratedColumn<String> get community =>
       $composableBuilder(column: $table.community, builder: (column) => column);
@@ -3260,9 +2739,7 @@ class $$FarmersTableAnnotationComposer
       $composableBuilder(column: $table.status, builder: (column) => column);
 
   GeneratedColumn<bool> get documentationComplete => $composableBuilder(
-    column: $table.documentationComplete,
-    builder: (column) => column,
-  );
+      column: $table.documentationComplete, builder: (column) => column);
 
   GeneratedColumn<DateTime> get createdAt =>
       $composableBuilder(column: $table.createdAt, builder: (column) => column);
@@ -3271,29 +2748,23 @@ class $$FarmersTableAnnotationComposer
       $composableBuilder(column: $table.updatedAt, builder: (column) => column);
 
   GeneratedColumn<String> get syncStatus => $composableBuilder(
-    column: $table.syncStatus,
-    builder: (column) => column,
-  );
+      column: $table.syncStatus, builder: (column) => column);
 }
 
-class $$FarmersTableTableManager
-    extends
-        RootTableManager<
-          _$AppDatabase,
-          $FarmersTable,
-          Farmer,
-          $$FarmersTableFilterComposer,
-          $$FarmersTableOrderingComposer,
-          $$FarmersTableAnnotationComposer,
-          $$FarmersTableCreateCompanionBuilder,
-          $$FarmersTableUpdateCompanionBuilder,
-          (Farmer, BaseReferences<_$AppDatabase, $FarmersTable, Farmer>),
-          Farmer,
-          PrefetchHooks Function()
-        > {
+class $$FarmersTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $FarmersTable,
+    Farmer,
+    $$FarmersTableFilterComposer,
+    $$FarmersTableOrderingComposer,
+    $$FarmersTableAnnotationComposer,
+    $$FarmersTableCreateCompanionBuilder,
+    $$FarmersTableUpdateCompanionBuilder,
+    (Farmer, BaseReferences<_$AppDatabase, $FarmersTable, Farmer>),
+    Farmer,
+    PrefetchHooks Function()> {
   $$FarmersTableTableManager(_$AppDatabase db, $FarmersTable table)
-    : super(
-        TableManagerState(
+      : super(TableManagerState(
           db: db,
           table: table,
           createFilteringComposer: () =>
@@ -3302,118 +2773,119 @@ class $$FarmersTableTableManager
               $$FarmersTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
               $$FarmersTableAnnotationComposer($db: db, $table: table),
-          updateCompanionCallback:
-              ({
-                Value<String> id = const Value.absent(),
-                Value<String?> serverId = const Value.absent(),
-                Value<String?> farmerNumber = const Value.absent(),
-                Value<String> name = const Value.absent(),
-                Value<String> districtCode = const Value.absent(),
-                Value<String?> community = const Value.absent(),
-                Value<String?> phone = const Value.absent(),
-                Value<String> status = const Value.absent(),
-                Value<bool> documentationComplete = const Value.absent(),
-                Value<DateTime> createdAt = const Value.absent(),
-                Value<DateTime> updatedAt = const Value.absent(),
-                Value<String> syncStatus = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => FarmersCompanion(
-                id: id,
-                serverId: serverId,
-                farmerNumber: farmerNumber,
-                name: name,
-                districtCode: districtCode,
-                community: community,
-                phone: phone,
-                status: status,
-                documentationComplete: documentationComplete,
-                createdAt: createdAt,
-                updatedAt: updatedAt,
-                syncStatus: syncStatus,
-                rowid: rowid,
-              ),
-          createCompanionCallback:
-              ({
-                required String id,
-                Value<String?> serverId = const Value.absent(),
-                Value<String?> farmerNumber = const Value.absent(),
-                required String name,
-                required String districtCode,
-                Value<String?> community = const Value.absent(),
-                Value<String?> phone = const Value.absent(),
-                Value<String> status = const Value.absent(),
-                Value<bool> documentationComplete = const Value.absent(),
-                required DateTime createdAt,
-                required DateTime updatedAt,
-                Value<String> syncStatus = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => FarmersCompanion.insert(
-                id: id,
-                serverId: serverId,
-                farmerNumber: farmerNumber,
-                name: name,
-                districtCode: districtCode,
-                community: community,
-                phone: phone,
-                status: status,
-                documentationComplete: documentationComplete,
-                createdAt: createdAt,
-                updatedAt: updatedAt,
-                syncStatus: syncStatus,
-                rowid: rowid,
-              ),
+          updateCompanionCallback: ({
+            Value<String> id = const Value.absent(),
+            Value<String?> serverId = const Value.absent(),
+            Value<String?> farmerNumber = const Value.absent(),
+            Value<String> name = const Value.absent(),
+            Value<String> districtCode = const Value.absent(),
+            Value<String?> community = const Value.absent(),
+            Value<String?> phone = const Value.absent(),
+            Value<String> status = const Value.absent(),
+            Value<bool> documentationComplete = const Value.absent(),
+            Value<DateTime> createdAt = const Value.absent(),
+            Value<DateTime> updatedAt = const Value.absent(),
+            Value<String> syncStatus = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              FarmersCompanion(
+            id: id,
+            serverId: serverId,
+            farmerNumber: farmerNumber,
+            name: name,
+            districtCode: districtCode,
+            community: community,
+            phone: phone,
+            status: status,
+            documentationComplete: documentationComplete,
+            createdAt: createdAt,
+            updatedAt: updatedAt,
+            syncStatus: syncStatus,
+            rowid: rowid,
+          ),
+          createCompanionCallback: ({
+            required String id,
+            Value<String?> serverId = const Value.absent(),
+            Value<String?> farmerNumber = const Value.absent(),
+            required String name,
+            required String districtCode,
+            Value<String?> community = const Value.absent(),
+            Value<String?> phone = const Value.absent(),
+            Value<String> status = const Value.absent(),
+            Value<bool> documentationComplete = const Value.absent(),
+            required DateTime createdAt,
+            required DateTime updatedAt,
+            Value<String> syncStatus = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              FarmersCompanion.insert(
+            id: id,
+            serverId: serverId,
+            farmerNumber: farmerNumber,
+            name: name,
+            districtCode: districtCode,
+            community: community,
+            phone: phone,
+            status: status,
+            documentationComplete: documentationComplete,
+            createdAt: createdAt,
+            updatedAt: updatedAt,
+            syncStatus: syncStatus,
+            rowid: rowid,
+          ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map((e) => (
+                    e.readTable<$FarmersTable, Farmer>(table),
+                    BaseReferences<_$AppDatabase, $FarmersTable, Farmer>(
+                        db, table, e)
+                  ))
               .toList(),
           prefetchHooksCallback: null,
-        ),
-      );
+        ));
 }
 
-typedef $$FarmersTableProcessedTableManager =
-    ProcessedTableManager<
-      _$AppDatabase,
-      $FarmersTable,
-      Farmer,
-      $$FarmersTableFilterComposer,
-      $$FarmersTableOrderingComposer,
-      $$FarmersTableAnnotationComposer,
-      $$FarmersTableCreateCompanionBuilder,
-      $$FarmersTableUpdateCompanionBuilder,
-      (Farmer, BaseReferences<_$AppDatabase, $FarmersTable, Farmer>),
-      Farmer,
-      PrefetchHooks Function()
-    >;
-typedef $$ProductionBatchesTableCreateCompanionBuilder =
-    ProductionBatchesCompanion Function({
-      required String id,
-      Value<String?> serverId,
-      Value<String?> batchNumber,
-      required String farmId,
-      required String pigIdsJson,
-      Value<double?> weightKg,
-      required DateTime recordedAt,
-      Value<String?> notes,
-      Value<String> status,
-      required DateTime createdAt,
-      Value<String> syncStatus,
-      Value<int> rowid,
-    });
-typedef $$ProductionBatchesTableUpdateCompanionBuilder =
-    ProductionBatchesCompanion Function({
-      Value<String> id,
-      Value<String?> serverId,
-      Value<String?> batchNumber,
-      Value<String> farmId,
-      Value<String> pigIdsJson,
-      Value<double?> weightKg,
-      Value<DateTime> recordedAt,
-      Value<String?> notes,
-      Value<String> status,
-      Value<DateTime> createdAt,
-      Value<String> syncStatus,
-      Value<int> rowid,
-    });
+typedef $$FarmersTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $FarmersTable,
+    Farmer,
+    $$FarmersTableFilterComposer,
+    $$FarmersTableOrderingComposer,
+    $$FarmersTableAnnotationComposer,
+    $$FarmersTableCreateCompanionBuilder,
+    $$FarmersTableUpdateCompanionBuilder,
+    (Farmer, BaseReferences<_$AppDatabase, $FarmersTable, Farmer>),
+    Farmer,
+    PrefetchHooks Function()>;
+typedef $$ProductionBatchesTableCreateCompanionBuilder
+    = ProductionBatchesCompanion Function({
+  required String id,
+  Value<String?> serverId,
+  Value<String?> batchNumber,
+  required String farmId,
+  required String pigIdsJson,
+  Value<double?> weightKg,
+  required DateTime recordedAt,
+  Value<String?> notes,
+  Value<String> status,
+  required DateTime createdAt,
+  Value<String> syncStatus,
+  Value<int> rowid,
+});
+typedef $$ProductionBatchesTableUpdateCompanionBuilder
+    = ProductionBatchesCompanion Function({
+  Value<String> id,
+  Value<String?> serverId,
+  Value<String?> batchNumber,
+  Value<String> farmId,
+  Value<String> pigIdsJson,
+  Value<double?> weightKg,
+  Value<DateTime> recordedAt,
+  Value<String?> notes,
+  Value<String> status,
+  Value<DateTime> createdAt,
+  Value<String> syncStatus,
+  Value<int> rowid,
+});
 
 class $$ProductionBatchesTableFilterComposer
     extends Composer<_$AppDatabase, $ProductionBatchesTable> {
@@ -3425,59 +2897,37 @@ class $$ProductionBatchesTableFilterComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnFilters<String> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.id, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get serverId => $composableBuilder(
-    column: $table.serverId,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.serverId, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get batchNumber => $composableBuilder(
-    column: $table.batchNumber,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.batchNumber, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get farmId => $composableBuilder(
-    column: $table.farmId,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.farmId, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get pigIdsJson => $composableBuilder(
-    column: $table.pigIdsJson,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.pigIdsJson, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<double> get weightKg => $composableBuilder(
-    column: $table.weightKg,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.weightKg, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<DateTime> get recordedAt => $composableBuilder(
-    column: $table.recordedAt,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.recordedAt, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get notes => $composableBuilder(
-    column: $table.notes,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.notes, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get status => $composableBuilder(
-    column: $table.status,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.status, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<DateTime> get createdAt => $composableBuilder(
-    column: $table.createdAt,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.createdAt, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get syncStatus => $composableBuilder(
-    column: $table.syncStatus,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.syncStatus, builder: (column) => ColumnFilters(column));
 }
 
 class $$ProductionBatchesTableOrderingComposer
@@ -3490,59 +2940,37 @@ class $$ProductionBatchesTableOrderingComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnOrderings<String> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.id, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get serverId => $composableBuilder(
-    column: $table.serverId,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.serverId, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get batchNumber => $composableBuilder(
-    column: $table.batchNumber,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.batchNumber, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get farmId => $composableBuilder(
-    column: $table.farmId,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.farmId, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get pigIdsJson => $composableBuilder(
-    column: $table.pigIdsJson,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.pigIdsJson, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<double> get weightKg => $composableBuilder(
-    column: $table.weightKg,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.weightKg, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<DateTime> get recordedAt => $composableBuilder(
-    column: $table.recordedAt,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.recordedAt, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get notes => $composableBuilder(
-    column: $table.notes,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.notes, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get status => $composableBuilder(
-    column: $table.status,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.status, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<DateTime> get createdAt => $composableBuilder(
-    column: $table.createdAt,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.createdAt, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get syncStatus => $composableBuilder(
-    column: $table.syncStatus,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.syncStatus, builder: (column) => ColumnOrderings(column));
 }
 
 class $$ProductionBatchesTableAnnotationComposer
@@ -3561,25 +2989,19 @@ class $$ProductionBatchesTableAnnotationComposer
       $composableBuilder(column: $table.serverId, builder: (column) => column);
 
   GeneratedColumn<String> get batchNumber => $composableBuilder(
-    column: $table.batchNumber,
-    builder: (column) => column,
-  );
+      column: $table.batchNumber, builder: (column) => column);
 
   GeneratedColumn<String> get farmId =>
       $composableBuilder(column: $table.farmId, builder: (column) => column);
 
   GeneratedColumn<String> get pigIdsJson => $composableBuilder(
-    column: $table.pigIdsJson,
-    builder: (column) => column,
-  );
+      column: $table.pigIdsJson, builder: (column) => column);
 
   GeneratedColumn<double> get weightKg =>
       $composableBuilder(column: $table.weightKg, builder: (column) => column);
 
   GeneratedColumn<DateTime> get recordedAt => $composableBuilder(
-    column: $table.recordedAt,
-    builder: (column) => column,
-  );
+      column: $table.recordedAt, builder: (column) => column);
 
   GeneratedColumn<String> get notes =>
       $composableBuilder(column: $table.notes, builder: (column) => column);
@@ -3591,38 +3013,27 @@ class $$ProductionBatchesTableAnnotationComposer
       $composableBuilder(column: $table.createdAt, builder: (column) => column);
 
   GeneratedColumn<String> get syncStatus => $composableBuilder(
-    column: $table.syncStatus,
-    builder: (column) => column,
-  );
+      column: $table.syncStatus, builder: (column) => column);
 }
 
-class $$ProductionBatchesTableTableManager
-    extends
-        RootTableManager<
-          _$AppDatabase,
-          $ProductionBatchesTable,
-          ProductionBatche,
-          $$ProductionBatchesTableFilterComposer,
-          $$ProductionBatchesTableOrderingComposer,
-          $$ProductionBatchesTableAnnotationComposer,
-          $$ProductionBatchesTableCreateCompanionBuilder,
-          $$ProductionBatchesTableUpdateCompanionBuilder,
-          (
-            ProductionBatche,
-            BaseReferences<
-              _$AppDatabase,
-              $ProductionBatchesTable,
-              ProductionBatche
-            >,
-          ),
-          ProductionBatche,
-          PrefetchHooks Function()
-        > {
+class $$ProductionBatchesTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $ProductionBatchesTable,
+    ProductionBatche,
+    $$ProductionBatchesTableFilterComposer,
+    $$ProductionBatchesTableOrderingComposer,
+    $$ProductionBatchesTableAnnotationComposer,
+    $$ProductionBatchesTableCreateCompanionBuilder,
+    $$ProductionBatchesTableUpdateCompanionBuilder,
+    (
+      ProductionBatche,
+      BaseReferences<_$AppDatabase, $ProductionBatchesTable, ProductionBatche>
+    ),
+    ProductionBatche,
+    PrefetchHooks Function()> {
   $$ProductionBatchesTableTableManager(
-    _$AppDatabase db,
-    $ProductionBatchesTable table,
-  ) : super(
-        TableManagerState(
+      _$AppDatabase db, $ProductionBatchesTable table)
+      : super(TableManagerState(
           db: db,
           table: table,
           createFilteringComposer: () =>
@@ -3631,122 +3042,118 @@ class $$ProductionBatchesTableTableManager
               $$ProductionBatchesTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
               $$ProductionBatchesTableAnnotationComposer(
-                $db: db,
-                $table: table,
-              ),
-          updateCompanionCallback:
-              ({
-                Value<String> id = const Value.absent(),
-                Value<String?> serverId = const Value.absent(),
-                Value<String?> batchNumber = const Value.absent(),
-                Value<String> farmId = const Value.absent(),
-                Value<String> pigIdsJson = const Value.absent(),
-                Value<double?> weightKg = const Value.absent(),
-                Value<DateTime> recordedAt = const Value.absent(),
-                Value<String?> notes = const Value.absent(),
-                Value<String> status = const Value.absent(),
-                Value<DateTime> createdAt = const Value.absent(),
-                Value<String> syncStatus = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => ProductionBatchesCompanion(
-                id: id,
-                serverId: serverId,
-                batchNumber: batchNumber,
-                farmId: farmId,
-                pigIdsJson: pigIdsJson,
-                weightKg: weightKg,
-                recordedAt: recordedAt,
-                notes: notes,
-                status: status,
-                createdAt: createdAt,
-                syncStatus: syncStatus,
-                rowid: rowid,
-              ),
-          createCompanionCallback:
-              ({
-                required String id,
-                Value<String?> serverId = const Value.absent(),
-                Value<String?> batchNumber = const Value.absent(),
-                required String farmId,
-                required String pigIdsJson,
-                Value<double?> weightKg = const Value.absent(),
-                required DateTime recordedAt,
-                Value<String?> notes = const Value.absent(),
-                Value<String> status = const Value.absent(),
-                required DateTime createdAt,
-                Value<String> syncStatus = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => ProductionBatchesCompanion.insert(
-                id: id,
-                serverId: serverId,
-                batchNumber: batchNumber,
-                farmId: farmId,
-                pigIdsJson: pigIdsJson,
-                weightKg: weightKg,
-                recordedAt: recordedAt,
-                notes: notes,
-                status: status,
-                createdAt: createdAt,
-                syncStatus: syncStatus,
-                rowid: rowid,
-              ),
+                  $db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<String> id = const Value.absent(),
+            Value<String?> serverId = const Value.absent(),
+            Value<String?> batchNumber = const Value.absent(),
+            Value<String> farmId = const Value.absent(),
+            Value<String> pigIdsJson = const Value.absent(),
+            Value<double?> weightKg = const Value.absent(),
+            Value<DateTime> recordedAt = const Value.absent(),
+            Value<String?> notes = const Value.absent(),
+            Value<String> status = const Value.absent(),
+            Value<DateTime> createdAt = const Value.absent(),
+            Value<String> syncStatus = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              ProductionBatchesCompanion(
+            id: id,
+            serverId: serverId,
+            batchNumber: batchNumber,
+            farmId: farmId,
+            pigIdsJson: pigIdsJson,
+            weightKg: weightKg,
+            recordedAt: recordedAt,
+            notes: notes,
+            status: status,
+            createdAt: createdAt,
+            syncStatus: syncStatus,
+            rowid: rowid,
+          ),
+          createCompanionCallback: ({
+            required String id,
+            Value<String?> serverId = const Value.absent(),
+            Value<String?> batchNumber = const Value.absent(),
+            required String farmId,
+            required String pigIdsJson,
+            Value<double?> weightKg = const Value.absent(),
+            required DateTime recordedAt,
+            Value<String?> notes = const Value.absent(),
+            Value<String> status = const Value.absent(),
+            required DateTime createdAt,
+            Value<String> syncStatus = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              ProductionBatchesCompanion.insert(
+            id: id,
+            serverId: serverId,
+            batchNumber: batchNumber,
+            farmId: farmId,
+            pigIdsJson: pigIdsJson,
+            weightKg: weightKg,
+            recordedAt: recordedAt,
+            notes: notes,
+            status: status,
+            createdAt: createdAt,
+            syncStatus: syncStatus,
+            rowid: rowid,
+          ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map((e) => (
+                    e.readTable<$ProductionBatchesTable, ProductionBatche>(
+                        table),
+                    BaseReferences<_$AppDatabase, $ProductionBatchesTable,
+                        ProductionBatche>(db, table, e)
+                  ))
               .toList(),
           prefetchHooksCallback: null,
-        ),
-      );
+        ));
 }
 
-typedef $$ProductionBatchesTableProcessedTableManager =
-    ProcessedTableManager<
-      _$AppDatabase,
-      $ProductionBatchesTable,
+typedef $$ProductionBatchesTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $ProductionBatchesTable,
+    ProductionBatche,
+    $$ProductionBatchesTableFilterComposer,
+    $$ProductionBatchesTableOrderingComposer,
+    $$ProductionBatchesTableAnnotationComposer,
+    $$ProductionBatchesTableCreateCompanionBuilder,
+    $$ProductionBatchesTableUpdateCompanionBuilder,
+    (
       ProductionBatche,
-      $$ProductionBatchesTableFilterComposer,
-      $$ProductionBatchesTableOrderingComposer,
-      $$ProductionBatchesTableAnnotationComposer,
-      $$ProductionBatchesTableCreateCompanionBuilder,
-      $$ProductionBatchesTableUpdateCompanionBuilder,
-      (
-        ProductionBatche,
-        BaseReferences<
-          _$AppDatabase,
-          $ProductionBatchesTable,
-          ProductionBatche
-        >,
-      ),
-      ProductionBatche,
-      PrefetchHooks Function()
-    >;
-typedef $$VeterinaryRecordsTableCreateCompanionBuilder =
-    VeterinaryRecordsCompanion Function({
-      required String id,
-      Value<String?> serverId,
-      Value<String?> recordNumber,
-      required String pigId,
-      required String type,
-      Value<String?> vaccineTypeCode,
-      required DateTime administeredAt,
-      Value<String?> notes,
-      required DateTime createdAt,
-      Value<String> syncStatus,
-      Value<int> rowid,
-    });
-typedef $$VeterinaryRecordsTableUpdateCompanionBuilder =
-    VeterinaryRecordsCompanion Function({
-      Value<String> id,
-      Value<String?> serverId,
-      Value<String?> recordNumber,
-      Value<String> pigId,
-      Value<String> type,
-      Value<String?> vaccineTypeCode,
-      Value<DateTime> administeredAt,
-      Value<String?> notes,
-      Value<DateTime> createdAt,
-      Value<String> syncStatus,
-      Value<int> rowid,
-    });
+      BaseReferences<_$AppDatabase, $ProductionBatchesTable, ProductionBatche>
+    ),
+    ProductionBatche,
+    PrefetchHooks Function()>;
+typedef $$VeterinaryRecordsTableCreateCompanionBuilder
+    = VeterinaryRecordsCompanion Function({
+  required String id,
+  Value<String?> serverId,
+  Value<String?> recordNumber,
+  required String pigId,
+  required String type,
+  Value<String?> vaccineTypeCode,
+  required DateTime administeredAt,
+  Value<String?> notes,
+  required DateTime createdAt,
+  Value<String> syncStatus,
+  Value<int> rowid,
+});
+typedef $$VeterinaryRecordsTableUpdateCompanionBuilder
+    = VeterinaryRecordsCompanion Function({
+  Value<String> id,
+  Value<String?> serverId,
+  Value<String?> recordNumber,
+  Value<String> pigId,
+  Value<String> type,
+  Value<String?> vaccineTypeCode,
+  Value<DateTime> administeredAt,
+  Value<String?> notes,
+  Value<DateTime> createdAt,
+  Value<String> syncStatus,
+  Value<int> rowid,
+});
 
 class $$VeterinaryRecordsTableFilterComposer
     extends Composer<_$AppDatabase, $VeterinaryRecordsTable> {
@@ -3758,54 +3165,36 @@ class $$VeterinaryRecordsTableFilterComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnFilters<String> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.id, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get serverId => $composableBuilder(
-    column: $table.serverId,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.serverId, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get recordNumber => $composableBuilder(
-    column: $table.recordNumber,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.recordNumber, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get pigId => $composableBuilder(
-    column: $table.pigId,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.pigId, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get type => $composableBuilder(
-    column: $table.type,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.type, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get vaccineTypeCode => $composableBuilder(
-    column: $table.vaccineTypeCode,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.vaccineTypeCode,
+      builder: (column) => ColumnFilters(column));
 
   ColumnFilters<DateTime> get administeredAt => $composableBuilder(
-    column: $table.administeredAt,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.administeredAt,
+      builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get notes => $composableBuilder(
-    column: $table.notes,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.notes, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<DateTime> get createdAt => $composableBuilder(
-    column: $table.createdAt,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.createdAt, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get syncStatus => $composableBuilder(
-    column: $table.syncStatus,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.syncStatus, builder: (column) => ColumnFilters(column));
 }
 
 class $$VeterinaryRecordsTableOrderingComposer
@@ -3818,54 +3207,37 @@ class $$VeterinaryRecordsTableOrderingComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnOrderings<String> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.id, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get serverId => $composableBuilder(
-    column: $table.serverId,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.serverId, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get recordNumber => $composableBuilder(
-    column: $table.recordNumber,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.recordNumber,
+      builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get pigId => $composableBuilder(
-    column: $table.pigId,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.pigId, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get type => $composableBuilder(
-    column: $table.type,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.type, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get vaccineTypeCode => $composableBuilder(
-    column: $table.vaccineTypeCode,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.vaccineTypeCode,
+      builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<DateTime> get administeredAt => $composableBuilder(
-    column: $table.administeredAt,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.administeredAt,
+      builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get notes => $composableBuilder(
-    column: $table.notes,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.notes, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<DateTime> get createdAt => $composableBuilder(
-    column: $table.createdAt,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.createdAt, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get syncStatus => $composableBuilder(
-    column: $table.syncStatus,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.syncStatus, builder: (column) => ColumnOrderings(column));
 }
 
 class $$VeterinaryRecordsTableAnnotationComposer
@@ -3884,9 +3256,7 @@ class $$VeterinaryRecordsTableAnnotationComposer
       $composableBuilder(column: $table.serverId, builder: (column) => column);
 
   GeneratedColumn<String> get recordNumber => $composableBuilder(
-    column: $table.recordNumber,
-    builder: (column) => column,
-  );
+      column: $table.recordNumber, builder: (column) => column);
 
   GeneratedColumn<String> get pigId =>
       $composableBuilder(column: $table.pigId, builder: (column) => column);
@@ -3895,14 +3265,10 @@ class $$VeterinaryRecordsTableAnnotationComposer
       $composableBuilder(column: $table.type, builder: (column) => column);
 
   GeneratedColumn<String> get vaccineTypeCode => $composableBuilder(
-    column: $table.vaccineTypeCode,
-    builder: (column) => column,
-  );
+      column: $table.vaccineTypeCode, builder: (column) => column);
 
   GeneratedColumn<DateTime> get administeredAt => $composableBuilder(
-    column: $table.administeredAt,
-    builder: (column) => column,
-  );
+      column: $table.administeredAt, builder: (column) => column);
 
   GeneratedColumn<String> get notes =>
       $composableBuilder(column: $table.notes, builder: (column) => column);
@@ -3911,38 +3277,27 @@ class $$VeterinaryRecordsTableAnnotationComposer
       $composableBuilder(column: $table.createdAt, builder: (column) => column);
 
   GeneratedColumn<String> get syncStatus => $composableBuilder(
-    column: $table.syncStatus,
-    builder: (column) => column,
-  );
+      column: $table.syncStatus, builder: (column) => column);
 }
 
-class $$VeterinaryRecordsTableTableManager
-    extends
-        RootTableManager<
-          _$AppDatabase,
-          $VeterinaryRecordsTable,
-          VeterinaryRecord,
-          $$VeterinaryRecordsTableFilterComposer,
-          $$VeterinaryRecordsTableOrderingComposer,
-          $$VeterinaryRecordsTableAnnotationComposer,
-          $$VeterinaryRecordsTableCreateCompanionBuilder,
-          $$VeterinaryRecordsTableUpdateCompanionBuilder,
-          (
-            VeterinaryRecord,
-            BaseReferences<
-              _$AppDatabase,
-              $VeterinaryRecordsTable,
-              VeterinaryRecord
-            >,
-          ),
-          VeterinaryRecord,
-          PrefetchHooks Function()
-        > {
+class $$VeterinaryRecordsTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $VeterinaryRecordsTable,
+    VeterinaryRecord,
+    $$VeterinaryRecordsTableFilterComposer,
+    $$VeterinaryRecordsTableOrderingComposer,
+    $$VeterinaryRecordsTableAnnotationComposer,
+    $$VeterinaryRecordsTableCreateCompanionBuilder,
+    $$VeterinaryRecordsTableUpdateCompanionBuilder,
+    (
+      VeterinaryRecord,
+      BaseReferences<_$AppDatabase, $VeterinaryRecordsTable, VeterinaryRecord>
+    ),
+    VeterinaryRecord,
+    PrefetchHooks Function()> {
   $$VeterinaryRecordsTableTableManager(
-    _$AppDatabase db,
-    $VeterinaryRecordsTable table,
-  ) : super(
-        TableManagerState(
+      _$AppDatabase db, $VeterinaryRecordsTable table)
+      : super(TableManagerState(
           db: db,
           table: table,
           createFilteringComposer: () =>
@@ -3951,118 +3306,114 @@ class $$VeterinaryRecordsTableTableManager
               $$VeterinaryRecordsTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
               $$VeterinaryRecordsTableAnnotationComposer(
-                $db: db,
-                $table: table,
-              ),
-          updateCompanionCallback:
-              ({
-                Value<String> id = const Value.absent(),
-                Value<String?> serverId = const Value.absent(),
-                Value<String?> recordNumber = const Value.absent(),
-                Value<String> pigId = const Value.absent(),
-                Value<String> type = const Value.absent(),
-                Value<String?> vaccineTypeCode = const Value.absent(),
-                Value<DateTime> administeredAt = const Value.absent(),
-                Value<String?> notes = const Value.absent(),
-                Value<DateTime> createdAt = const Value.absent(),
-                Value<String> syncStatus = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => VeterinaryRecordsCompanion(
-                id: id,
-                serverId: serverId,
-                recordNumber: recordNumber,
-                pigId: pigId,
-                type: type,
-                vaccineTypeCode: vaccineTypeCode,
-                administeredAt: administeredAt,
-                notes: notes,
-                createdAt: createdAt,
-                syncStatus: syncStatus,
-                rowid: rowid,
-              ),
-          createCompanionCallback:
-              ({
-                required String id,
-                Value<String?> serverId = const Value.absent(),
-                Value<String?> recordNumber = const Value.absent(),
-                required String pigId,
-                required String type,
-                Value<String?> vaccineTypeCode = const Value.absent(),
-                required DateTime administeredAt,
-                Value<String?> notes = const Value.absent(),
-                required DateTime createdAt,
-                Value<String> syncStatus = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => VeterinaryRecordsCompanion.insert(
-                id: id,
-                serverId: serverId,
-                recordNumber: recordNumber,
-                pigId: pigId,
-                type: type,
-                vaccineTypeCode: vaccineTypeCode,
-                administeredAt: administeredAt,
-                notes: notes,
-                createdAt: createdAt,
-                syncStatus: syncStatus,
-                rowid: rowid,
-              ),
+                  $db: db, $table: table),
+          updateCompanionCallback: ({
+            Value<String> id = const Value.absent(),
+            Value<String?> serverId = const Value.absent(),
+            Value<String?> recordNumber = const Value.absent(),
+            Value<String> pigId = const Value.absent(),
+            Value<String> type = const Value.absent(),
+            Value<String?> vaccineTypeCode = const Value.absent(),
+            Value<DateTime> administeredAt = const Value.absent(),
+            Value<String?> notes = const Value.absent(),
+            Value<DateTime> createdAt = const Value.absent(),
+            Value<String> syncStatus = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              VeterinaryRecordsCompanion(
+            id: id,
+            serverId: serverId,
+            recordNumber: recordNumber,
+            pigId: pigId,
+            type: type,
+            vaccineTypeCode: vaccineTypeCode,
+            administeredAt: administeredAt,
+            notes: notes,
+            createdAt: createdAt,
+            syncStatus: syncStatus,
+            rowid: rowid,
+          ),
+          createCompanionCallback: ({
+            required String id,
+            Value<String?> serverId = const Value.absent(),
+            Value<String?> recordNumber = const Value.absent(),
+            required String pigId,
+            required String type,
+            Value<String?> vaccineTypeCode = const Value.absent(),
+            required DateTime administeredAt,
+            Value<String?> notes = const Value.absent(),
+            required DateTime createdAt,
+            Value<String> syncStatus = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              VeterinaryRecordsCompanion.insert(
+            id: id,
+            serverId: serverId,
+            recordNumber: recordNumber,
+            pigId: pigId,
+            type: type,
+            vaccineTypeCode: vaccineTypeCode,
+            administeredAt: administeredAt,
+            notes: notes,
+            createdAt: createdAt,
+            syncStatus: syncStatus,
+            rowid: rowid,
+          ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map((e) => (
+                    e.readTable<$VeterinaryRecordsTable, VeterinaryRecord>(
+                        table),
+                    BaseReferences<_$AppDatabase, $VeterinaryRecordsTable,
+                        VeterinaryRecord>(db, table, e)
+                  ))
               .toList(),
           prefetchHooksCallback: null,
-        ),
-      );
+        ));
 }
 
-typedef $$VeterinaryRecordsTableProcessedTableManager =
-    ProcessedTableManager<
-      _$AppDatabase,
-      $VeterinaryRecordsTable,
+typedef $$VeterinaryRecordsTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $VeterinaryRecordsTable,
+    VeterinaryRecord,
+    $$VeterinaryRecordsTableFilterComposer,
+    $$VeterinaryRecordsTableOrderingComposer,
+    $$VeterinaryRecordsTableAnnotationComposer,
+    $$VeterinaryRecordsTableCreateCompanionBuilder,
+    $$VeterinaryRecordsTableUpdateCompanionBuilder,
+    (
       VeterinaryRecord,
-      $$VeterinaryRecordsTableFilterComposer,
-      $$VeterinaryRecordsTableOrderingComposer,
-      $$VeterinaryRecordsTableAnnotationComposer,
-      $$VeterinaryRecordsTableCreateCompanionBuilder,
-      $$VeterinaryRecordsTableUpdateCompanionBuilder,
-      (
-        VeterinaryRecord,
-        BaseReferences<
-          _$AppDatabase,
-          $VeterinaryRecordsTable,
-          VeterinaryRecord
-        >,
-      ),
-      VeterinaryRecord,
-      PrefetchHooks Function()
-    >;
-typedef $$OutboxItemsTableCreateCompanionBuilder =
-    OutboxItemsCompanion Function({
-      Value<int> id,
-      required String entityType,
-      required String clientId,
-      required String idempotencyKey,
-      required String payloadJson,
-      Value<int> priorityTier,
-      Value<String> status,
-      Value<int> retryCount,
-      required DateTime createdAt,
-      Value<DateTime?> lastAttemptAt,
-      Value<String?> errorMessage,
-    });
-typedef $$OutboxItemsTableUpdateCompanionBuilder =
-    OutboxItemsCompanion Function({
-      Value<int> id,
-      Value<String> entityType,
-      Value<String> clientId,
-      Value<String> idempotencyKey,
-      Value<String> payloadJson,
-      Value<int> priorityTier,
-      Value<String> status,
-      Value<int> retryCount,
-      Value<DateTime> createdAt,
-      Value<DateTime?> lastAttemptAt,
-      Value<String?> errorMessage,
-    });
+      BaseReferences<_$AppDatabase, $VeterinaryRecordsTable, VeterinaryRecord>
+    ),
+    VeterinaryRecord,
+    PrefetchHooks Function()>;
+typedef $$OutboxItemsTableCreateCompanionBuilder = OutboxItemsCompanion
+    Function({
+  Value<int> id,
+  required String entityType,
+  required String clientId,
+  required String idempotencyKey,
+  required String payloadJson,
+  Value<int> priorityTier,
+  Value<String> status,
+  Value<int> retryCount,
+  required DateTime createdAt,
+  Value<DateTime?> lastAttemptAt,
+  Value<String?> errorMessage,
+});
+typedef $$OutboxItemsTableUpdateCompanionBuilder = OutboxItemsCompanion
+    Function({
+  Value<int> id,
+  Value<String> entityType,
+  Value<String> clientId,
+  Value<String> idempotencyKey,
+  Value<String> payloadJson,
+  Value<int> priorityTier,
+  Value<String> status,
+  Value<int> retryCount,
+  Value<DateTime> createdAt,
+  Value<DateTime?> lastAttemptAt,
+  Value<String?> errorMessage,
+});
 
 class $$OutboxItemsTableFilterComposer
     extends Composer<_$AppDatabase, $OutboxItemsTable> {
@@ -4074,59 +3425,38 @@ class $$OutboxItemsTableFilterComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnFilters<int> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.id, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get entityType => $composableBuilder(
-    column: $table.entityType,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.entityType, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get clientId => $composableBuilder(
-    column: $table.clientId,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.clientId, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get idempotencyKey => $composableBuilder(
-    column: $table.idempotencyKey,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.idempotencyKey,
+      builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get payloadJson => $composableBuilder(
-    column: $table.payloadJson,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.payloadJson, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<int> get priorityTier => $composableBuilder(
-    column: $table.priorityTier,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.priorityTier, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get status => $composableBuilder(
-    column: $table.status,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.status, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<int> get retryCount => $composableBuilder(
-    column: $table.retryCount,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.retryCount, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<DateTime> get createdAt => $composableBuilder(
-    column: $table.createdAt,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.createdAt, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<DateTime> get lastAttemptAt => $composableBuilder(
-    column: $table.lastAttemptAt,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.lastAttemptAt, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get errorMessage => $composableBuilder(
-    column: $table.errorMessage,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.errorMessage, builder: (column) => ColumnFilters(column));
 }
 
 class $$OutboxItemsTableOrderingComposer
@@ -4139,59 +3469,41 @@ class $$OutboxItemsTableOrderingComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnOrderings<int> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.id, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get entityType => $composableBuilder(
-    column: $table.entityType,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.entityType, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get clientId => $composableBuilder(
-    column: $table.clientId,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.clientId, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get idempotencyKey => $composableBuilder(
-    column: $table.idempotencyKey,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.idempotencyKey,
+      builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get payloadJson => $composableBuilder(
-    column: $table.payloadJson,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.payloadJson, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<int> get priorityTier => $composableBuilder(
-    column: $table.priorityTier,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.priorityTier,
+      builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get status => $composableBuilder(
-    column: $table.status,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.status, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<int> get retryCount => $composableBuilder(
-    column: $table.retryCount,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.retryCount, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<DateTime> get createdAt => $composableBuilder(
-    column: $table.createdAt,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.createdAt, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<DateTime> get lastAttemptAt => $composableBuilder(
-    column: $table.lastAttemptAt,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.lastAttemptAt,
+      builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get errorMessage => $composableBuilder(
-    column: $table.errorMessage,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.errorMessage,
+      builder: (column) => ColumnOrderings(column));
 }
 
 class $$OutboxItemsTableAnnotationComposer
@@ -4207,71 +3519,50 @@ class $$OutboxItemsTableAnnotationComposer
       $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get entityType => $composableBuilder(
-    column: $table.entityType,
-    builder: (column) => column,
-  );
+      column: $table.entityType, builder: (column) => column);
 
   GeneratedColumn<String> get clientId =>
       $composableBuilder(column: $table.clientId, builder: (column) => column);
 
   GeneratedColumn<String> get idempotencyKey => $composableBuilder(
-    column: $table.idempotencyKey,
-    builder: (column) => column,
-  );
+      column: $table.idempotencyKey, builder: (column) => column);
 
   GeneratedColumn<String> get payloadJson => $composableBuilder(
-    column: $table.payloadJson,
-    builder: (column) => column,
-  );
+      column: $table.payloadJson, builder: (column) => column);
 
   GeneratedColumn<int> get priorityTier => $composableBuilder(
-    column: $table.priorityTier,
-    builder: (column) => column,
-  );
+      column: $table.priorityTier, builder: (column) => column);
 
   GeneratedColumn<String> get status =>
       $composableBuilder(column: $table.status, builder: (column) => column);
 
   GeneratedColumn<int> get retryCount => $composableBuilder(
-    column: $table.retryCount,
-    builder: (column) => column,
-  );
+      column: $table.retryCount, builder: (column) => column);
 
   GeneratedColumn<DateTime> get createdAt =>
       $composableBuilder(column: $table.createdAt, builder: (column) => column);
 
   GeneratedColumn<DateTime> get lastAttemptAt => $composableBuilder(
-    column: $table.lastAttemptAt,
-    builder: (column) => column,
-  );
+      column: $table.lastAttemptAt, builder: (column) => column);
 
   GeneratedColumn<String> get errorMessage => $composableBuilder(
-    column: $table.errorMessage,
-    builder: (column) => column,
-  );
+      column: $table.errorMessage, builder: (column) => column);
 }
 
-class $$OutboxItemsTableTableManager
-    extends
-        RootTableManager<
-          _$AppDatabase,
-          $OutboxItemsTable,
-          OutboxItem,
-          $$OutboxItemsTableFilterComposer,
-          $$OutboxItemsTableOrderingComposer,
-          $$OutboxItemsTableAnnotationComposer,
-          $$OutboxItemsTableCreateCompanionBuilder,
-          $$OutboxItemsTableUpdateCompanionBuilder,
-          (
-            OutboxItem,
-            BaseReferences<_$AppDatabase, $OutboxItemsTable, OutboxItem>,
-          ),
-          OutboxItem,
-          PrefetchHooks Function()
-        > {
+class $$OutboxItemsTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $OutboxItemsTable,
+    OutboxItem,
+    $$OutboxItemsTableFilterComposer,
+    $$OutboxItemsTableOrderingComposer,
+    $$OutboxItemsTableAnnotationComposer,
+    $$OutboxItemsTableCreateCompanionBuilder,
+    $$OutboxItemsTableUpdateCompanionBuilder,
+    (OutboxItem, BaseReferences<_$AppDatabase, $OutboxItemsTable, OutboxItem>),
+    OutboxItem,
+    PrefetchHooks Function()> {
   $$OutboxItemsTableTableManager(_$AppDatabase db, $OutboxItemsTable table)
-    : super(
-        TableManagerState(
+      : super(TableManagerState(
           db: db,
           table: table,
           createFilteringComposer: () =>
@@ -4280,99 +3571,97 @@ class $$OutboxItemsTableTableManager
               $$OutboxItemsTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
               $$OutboxItemsTableAnnotationComposer($db: db, $table: table),
-          updateCompanionCallback:
-              ({
-                Value<int> id = const Value.absent(),
-                Value<String> entityType = const Value.absent(),
-                Value<String> clientId = const Value.absent(),
-                Value<String> idempotencyKey = const Value.absent(),
-                Value<String> payloadJson = const Value.absent(),
-                Value<int> priorityTier = const Value.absent(),
-                Value<String> status = const Value.absent(),
-                Value<int> retryCount = const Value.absent(),
-                Value<DateTime> createdAt = const Value.absent(),
-                Value<DateTime?> lastAttemptAt = const Value.absent(),
-                Value<String?> errorMessage = const Value.absent(),
-              }) => OutboxItemsCompanion(
-                id: id,
-                entityType: entityType,
-                clientId: clientId,
-                idempotencyKey: idempotencyKey,
-                payloadJson: payloadJson,
-                priorityTier: priorityTier,
-                status: status,
-                retryCount: retryCount,
-                createdAt: createdAt,
-                lastAttemptAt: lastAttemptAt,
-                errorMessage: errorMessage,
-              ),
-          createCompanionCallback:
-              ({
-                Value<int> id = const Value.absent(),
-                required String entityType,
-                required String clientId,
-                required String idempotencyKey,
-                required String payloadJson,
-                Value<int> priorityTier = const Value.absent(),
-                Value<String> status = const Value.absent(),
-                Value<int> retryCount = const Value.absent(),
-                required DateTime createdAt,
-                Value<DateTime?> lastAttemptAt = const Value.absent(),
-                Value<String?> errorMessage = const Value.absent(),
-              }) => OutboxItemsCompanion.insert(
-                id: id,
-                entityType: entityType,
-                clientId: clientId,
-                idempotencyKey: idempotencyKey,
-                payloadJson: payloadJson,
-                priorityTier: priorityTier,
-                status: status,
-                retryCount: retryCount,
-                createdAt: createdAt,
-                lastAttemptAt: lastAttemptAt,
-                errorMessage: errorMessage,
-              ),
+          updateCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            Value<String> entityType = const Value.absent(),
+            Value<String> clientId = const Value.absent(),
+            Value<String> idempotencyKey = const Value.absent(),
+            Value<String> payloadJson = const Value.absent(),
+            Value<int> priorityTier = const Value.absent(),
+            Value<String> status = const Value.absent(),
+            Value<int> retryCount = const Value.absent(),
+            Value<DateTime> createdAt = const Value.absent(),
+            Value<DateTime?> lastAttemptAt = const Value.absent(),
+            Value<String?> errorMessage = const Value.absent(),
+          }) =>
+              OutboxItemsCompanion(
+            id: id,
+            entityType: entityType,
+            clientId: clientId,
+            idempotencyKey: idempotencyKey,
+            payloadJson: payloadJson,
+            priorityTier: priorityTier,
+            status: status,
+            retryCount: retryCount,
+            createdAt: createdAt,
+            lastAttemptAt: lastAttemptAt,
+            errorMessage: errorMessage,
+          ),
+          createCompanionCallback: ({
+            Value<int> id = const Value.absent(),
+            required String entityType,
+            required String clientId,
+            required String idempotencyKey,
+            required String payloadJson,
+            Value<int> priorityTier = const Value.absent(),
+            Value<String> status = const Value.absent(),
+            Value<int> retryCount = const Value.absent(),
+            required DateTime createdAt,
+            Value<DateTime?> lastAttemptAt = const Value.absent(),
+            Value<String?> errorMessage = const Value.absent(),
+          }) =>
+              OutboxItemsCompanion.insert(
+            id: id,
+            entityType: entityType,
+            clientId: clientId,
+            idempotencyKey: idempotencyKey,
+            payloadJson: payloadJson,
+            priorityTier: priorityTier,
+            status: status,
+            retryCount: retryCount,
+            createdAt: createdAt,
+            lastAttemptAt: lastAttemptAt,
+            errorMessage: errorMessage,
+          ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map((e) => (
+                    e.readTable<$OutboxItemsTable, OutboxItem>(table),
+                    BaseReferences<_$AppDatabase, $OutboxItemsTable,
+                        OutboxItem>(db, table, e)
+                  ))
               .toList(),
           prefetchHooksCallback: null,
-        ),
-      );
+        ));
 }
 
-typedef $$OutboxItemsTableProcessedTableManager =
-    ProcessedTableManager<
-      _$AppDatabase,
-      $OutboxItemsTable,
-      OutboxItem,
-      $$OutboxItemsTableFilterComposer,
-      $$OutboxItemsTableOrderingComposer,
-      $$OutboxItemsTableAnnotationComposer,
-      $$OutboxItemsTableCreateCompanionBuilder,
-      $$OutboxItemsTableUpdateCompanionBuilder,
-      (
-        OutboxItem,
-        BaseReferences<_$AppDatabase, $OutboxItemsTable, OutboxItem>,
-      ),
-      OutboxItem,
-      PrefetchHooks Function()
-    >;
-typedef $$LookupValuesTableCreateCompanionBuilder =
-    LookupValuesCompanion Function({
-      required String lookupTableCode,
-      required String code,
-      required String label,
-      Value<String?> metadataJson,
-      Value<int> rowid,
-    });
-typedef $$LookupValuesTableUpdateCompanionBuilder =
-    LookupValuesCompanion Function({
-      Value<String> lookupTableCode,
-      Value<String> code,
-      Value<String> label,
-      Value<String?> metadataJson,
-      Value<int> rowid,
-    });
+typedef $$OutboxItemsTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $OutboxItemsTable,
+    OutboxItem,
+    $$OutboxItemsTableFilterComposer,
+    $$OutboxItemsTableOrderingComposer,
+    $$OutboxItemsTableAnnotationComposer,
+    $$OutboxItemsTableCreateCompanionBuilder,
+    $$OutboxItemsTableUpdateCompanionBuilder,
+    (OutboxItem, BaseReferences<_$AppDatabase, $OutboxItemsTable, OutboxItem>),
+    OutboxItem,
+    PrefetchHooks Function()>;
+typedef $$LookupValuesTableCreateCompanionBuilder = LookupValuesCompanion
+    Function({
+  required String lookupTableCode,
+  required String code,
+  required String label,
+  Value<String?> metadataJson,
+  Value<int> rowid,
+});
+typedef $$LookupValuesTableUpdateCompanionBuilder = LookupValuesCompanion
+    Function({
+  Value<String> lookupTableCode,
+  Value<String> code,
+  Value<String> label,
+  Value<String?> metadataJson,
+  Value<int> rowid,
+});
 
 class $$LookupValuesTableFilterComposer
     extends Composer<_$AppDatabase, $LookupValuesTable> {
@@ -4384,24 +3673,17 @@ class $$LookupValuesTableFilterComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnFilters<String> get lookupTableCode => $composableBuilder(
-    column: $table.lookupTableCode,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.lookupTableCode,
+      builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get code => $composableBuilder(
-    column: $table.code,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.code, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get label => $composableBuilder(
-    column: $table.label,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.label, builder: (column) => ColumnFilters(column));
 
   ColumnFilters<String> get metadataJson => $composableBuilder(
-    column: $table.metadataJson,
-    builder: (column) => ColumnFilters(column),
-  );
+      column: $table.metadataJson, builder: (column) => ColumnFilters(column));
 }
 
 class $$LookupValuesTableOrderingComposer
@@ -4414,24 +3696,18 @@ class $$LookupValuesTableOrderingComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnOrderings<String> get lookupTableCode => $composableBuilder(
-    column: $table.lookupTableCode,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.lookupTableCode,
+      builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get code => $composableBuilder(
-    column: $table.code,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.code, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get label => $composableBuilder(
-    column: $table.label,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.label, builder: (column) => ColumnOrderings(column));
 
   ColumnOrderings<String> get metadataJson => $composableBuilder(
-    column: $table.metadataJson,
-    builder: (column) => ColumnOrderings(column),
-  );
+      column: $table.metadataJson,
+      builder: (column) => ColumnOrderings(column));
 }
 
 class $$LookupValuesTableAnnotationComposer
@@ -4444,9 +3720,7 @@ class $$LookupValuesTableAnnotationComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   GeneratedColumn<String> get lookupTableCode => $composableBuilder(
-    column: $table.lookupTableCode,
-    builder: (column) => column,
-  );
+      column: $table.lookupTableCode, builder: (column) => column);
 
   GeneratedColumn<String> get code =>
       $composableBuilder(column: $table.code, builder: (column) => column);
@@ -4455,32 +3729,26 @@ class $$LookupValuesTableAnnotationComposer
       $composableBuilder(column: $table.label, builder: (column) => column);
 
   GeneratedColumn<String> get metadataJson => $composableBuilder(
-    column: $table.metadataJson,
-    builder: (column) => column,
-  );
+      column: $table.metadataJson, builder: (column) => column);
 }
 
-class $$LookupValuesTableTableManager
-    extends
-        RootTableManager<
-          _$AppDatabase,
-          $LookupValuesTable,
-          LookupValue,
-          $$LookupValuesTableFilterComposer,
-          $$LookupValuesTableOrderingComposer,
-          $$LookupValuesTableAnnotationComposer,
-          $$LookupValuesTableCreateCompanionBuilder,
-          $$LookupValuesTableUpdateCompanionBuilder,
-          (
-            LookupValue,
-            BaseReferences<_$AppDatabase, $LookupValuesTable, LookupValue>,
-          ),
-          LookupValue,
-          PrefetchHooks Function()
-        > {
+class $$LookupValuesTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $LookupValuesTable,
+    LookupValue,
+    $$LookupValuesTableFilterComposer,
+    $$LookupValuesTableOrderingComposer,
+    $$LookupValuesTableAnnotationComposer,
+    $$LookupValuesTableCreateCompanionBuilder,
+    $$LookupValuesTableUpdateCompanionBuilder,
+    (
+      LookupValue,
+      BaseReferences<_$AppDatabase, $LookupValuesTable, LookupValue>
+    ),
+    LookupValue,
+    PrefetchHooks Function()> {
   $$LookupValuesTableTableManager(_$AppDatabase db, $LookupValuesTable table)
-    : super(
-        TableManagerState(
+      : super(TableManagerState(
           db: db,
           table: table,
           createFilteringComposer: () =>
@@ -4489,59 +3757,60 @@ class $$LookupValuesTableTableManager
               $$LookupValuesTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
               $$LookupValuesTableAnnotationComposer($db: db, $table: table),
-          updateCompanionCallback:
-              ({
-                Value<String> lookupTableCode = const Value.absent(),
-                Value<String> code = const Value.absent(),
-                Value<String> label = const Value.absent(),
-                Value<String?> metadataJson = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => LookupValuesCompanion(
-                lookupTableCode: lookupTableCode,
-                code: code,
-                label: label,
-                metadataJson: metadataJson,
-                rowid: rowid,
-              ),
-          createCompanionCallback:
-              ({
-                required String lookupTableCode,
-                required String code,
-                required String label,
-                Value<String?> metadataJson = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => LookupValuesCompanion.insert(
-                lookupTableCode: lookupTableCode,
-                code: code,
-                label: label,
-                metadataJson: metadataJson,
-                rowid: rowid,
-              ),
+          updateCompanionCallback: ({
+            Value<String> lookupTableCode = const Value.absent(),
+            Value<String> code = const Value.absent(),
+            Value<String> label = const Value.absent(),
+            Value<String?> metadataJson = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              LookupValuesCompanion(
+            lookupTableCode: lookupTableCode,
+            code: code,
+            label: label,
+            metadataJson: metadataJson,
+            rowid: rowid,
+          ),
+          createCompanionCallback: ({
+            required String lookupTableCode,
+            required String code,
+            required String label,
+            Value<String?> metadataJson = const Value.absent(),
+            Value<int> rowid = const Value.absent(),
+          }) =>
+              LookupValuesCompanion.insert(
+            lookupTableCode: lookupTableCode,
+            code: code,
+            label: label,
+            metadataJson: metadataJson,
+            rowid: rowid,
+          ),
           withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .map((e) => (
+                    e.readTable<$LookupValuesTable, LookupValue>(table),
+                    BaseReferences<_$AppDatabase, $LookupValuesTable,
+                        LookupValue>(db, table, e)
+                  ))
               .toList(),
           prefetchHooksCallback: null,
-        ),
-      );
+        ));
 }
 
-typedef $$LookupValuesTableProcessedTableManager =
-    ProcessedTableManager<
-      _$AppDatabase,
-      $LookupValuesTable,
+typedef $$LookupValuesTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $LookupValuesTable,
+    LookupValue,
+    $$LookupValuesTableFilterComposer,
+    $$LookupValuesTableOrderingComposer,
+    $$LookupValuesTableAnnotationComposer,
+    $$LookupValuesTableCreateCompanionBuilder,
+    $$LookupValuesTableUpdateCompanionBuilder,
+    (
       LookupValue,
-      $$LookupValuesTableFilterComposer,
-      $$LookupValuesTableOrderingComposer,
-      $$LookupValuesTableAnnotationComposer,
-      $$LookupValuesTableCreateCompanionBuilder,
-      $$LookupValuesTableUpdateCompanionBuilder,
-      (
-        LookupValue,
-        BaseReferences<_$AppDatabase, $LookupValuesTable, LookupValue>,
-      ),
-      LookupValue,
-      PrefetchHooks Function()
-    >;
+      BaseReferences<_$AppDatabase, $LookupValuesTable, LookupValue>
+    ),
+    LookupValue,
+    PrefetchHooks Function()>;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;

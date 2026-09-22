@@ -1,8 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';
 import '../network/api_client.dart';
 import '../storage/secure_storage.dart';
 import '../database/app_database.dart';
+import '../lookup/data/repositories/lookup_repository.dart';
 import 'auth_state.dart';
 
 final authProvider = StateNotifierProvider<AuthController, AuthState>((ref) {
@@ -58,6 +61,15 @@ class AuthController extends StateNotifier<AuthState> {
       permissions: (data['permissions'] as List).cast<String>(),
       scopeDistrict: scope?['district'] as String?,
     );
+
+    // OSDS FR-OSDS-005 — pull reference data (districts, breeds, vaccine
+    // types) as soon as we're authenticated, so offline forms have real
+    // dropdown data cached before the user ever goes offline. Best-effort
+    // and non-blocking: login must succeed even if this pull fails (e.g.
+    // the device goes offline between /auth/login and this call) — the
+    // previous cached values (if any) simply remain in place, and this
+    // runs again on every future login.
+    unawaited(LookupRepository().refreshFromServer().catchError((_) {}));
   }
 
   /// OSDS FR-OSDS-039 — logout clears both server-side tokens and all

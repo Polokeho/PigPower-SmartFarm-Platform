@@ -44,32 +44,5 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Flutter
-mobile/.dart_tool/
-mobile/.packages
-mobile/build/
-mobile/.flutter-plugins
-mobile/.flutter-plugins-dependencies
-mobile/.metadata
-
-# Python
-backend/venv/
-backend/__pycache__/
-backend/.pytest_cache/
-*.pyc
-
-# VS Code
-.vscode/
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-
-# Logs
-*.log
-
-# Environment Variables
-.env
-.env.*
+# Widget Preview related
+.widget_preview/
